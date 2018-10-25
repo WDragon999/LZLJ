@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国窖系列-泸州老窖官方商城</title>
+    <link rel="stylesheet" href="css/jiaolinjiu.css">
+    <script src="js/jquery-1.11.3.js"></script><script></script>
+    <style>
+        .index_hot{
+            text-align: center;
+            background-color:#ccc;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div ></div>
+    <div height="565" width="100%">
+        <img src="img/f66e7be7d4807f93a45fefefeb1ab460f548361a.jpg" alt="">
+    </div>
+
+
+    <div class="index_hot">
+        <img src="img/brandshow_tit.png" alt="">
+    </div>
+
+    <div class="section">
+        <div class="wrapper">
+            <div class="wrapper_inner" style="text-align:center">
+                <div>
+                    <img src="img/idnex_jiaolinjiu(1).jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/idnex_jiaolinjiu(2).jpg">
+                </div>
+                <div>
+                    <img src="img/idnex_jiaolinjiu(3).jpg">
+                </div>
+                <div>
+                    <img src="img/idnex_jiaolinjiu(4).jpg">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        $.ajax({
+            type:"GET",
+            url:"header.html",
+            success:function(data){
+                $(".header").append($(data));
+            }
+        })
+        $(".footer").load("foot.html");
+        
+        $(function(){
+            $(".ih-item").hover(function(){
+                $(this).children(".ih-item-txt").show();
+            },function(){
+                $(this).children(".ih-item-txt").hide();
+            })
+
+
+            
+        })
+    </script>
+</body>
+</html>

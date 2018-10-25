@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/culture.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="wraper">
+        <div id="header"></div>
+    </div>
+
+    <div class="middle">
+        <div class="container">
+            <div class="site">
+                <span>当前位置：首页-文化</span>
+            </div>
+            <div class="brand_index_list">
+                <div class="content">
+                    <div class="nb_tit">
+                        <p>文化遗产双国宝</p>
+                        <span></span>
+                        <a href="#" class="service_more">查看更多</a>
+                    </div>
+                    <div class="culture_img fiexd">
+                        <a href="#"><img src="img/53202a30d5c12.jpg" width="667" height="500" class="fl"></a>
+                        <a href="#"><img src="img/536b20640040c.jpg" width="333" height="251" class="fl"></a>
+                        <a href="#"><img src="img/culture3.jpg" width="333" height="249" class="fl"></a>
+                        <div class="culture_txt">
+                            <p>窖池</p>
+                            <p>明万历年间，“舒聚源”作坊在城南营沟建泥窖，精选城外五渡溪优质黄泥踩揉建成发酵容器，并以龙泉井水为酿酒用水，创研“万年母糟，续糟配料，泥窖生香，密封发酵，看花断酒，窖藏老熟”的酿酒技艺，为泸...</p>
+                            <a href="#">查看详情</a>
+                        </div>
+                        <div class="culture_txt2">作坊</div>
+                        <div class="culture_txt2 culture_txt3">藏酒洞</div>
+                    </div>
+                    <div class="nb_tit">
+                        <p>文化专题</p>
+                        <span></span>
+                        <a href="#" class="service_more">查看更多</a>
+                    </div>
+                    <div class="topic">
+                        <img src="img/special_bg.png" alt="明万历年间" width="1000" height="521">
+                        <ul class="topic_list">
+                            <li><img src="img/topic_1.jpg" alt=""></li>
+                            <li><img src="img/topic_2.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="chunyang">
+                        <img src="img/chunyang.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"header.html",
+                content:document.body,
+                success:function(sView){
+                    $("#header").append($(sView));
+                }
+            })
+            // $('#header').load('header.html');
+            $('#footer').load('footer.html');
+            
+        })   
+    </script>
+</body> 
+</html>

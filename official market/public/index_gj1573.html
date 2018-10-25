@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国窖系列-泸州老窖官方商城</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gj1573.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div ></div>
+    <div height="565" width="100%">
+        <img src="img/gj1573_banner.jpg" alt="">
+    </div>
+
+
+    <div class="index_hot">
+        <img src="img/brandshow_tit.png" alt="">
+        <div class="row">
+            <div class="ih-item">
+                <a href="#"><img src="img/56a87270f4d7bcf9f791c2d1dacd43a42933983e.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/9d2ec3a9e6965c5d48b64c92997787037a466930.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/9757e1619696ca7e5c0fdde75a92a0b4d31a13d3.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/2af1eb89a76f550d7f4757865cc12f7592fd25af.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div>
+            <img src="img/968e6fcb85817488f964a6a3666a0ad824a30564.jpg" alt="">
+        </div>
+        <div class="wrapper">
+            <img src="img/gj1573_background.jpg" alt="">
+            <!-- <div class="wrapper_inner">
+                <div>
+                    <img src="img/a3454c948ea765cf652ba678e204910338d35a5f.jpg">
+                </div>
+                <div class="img1">
+                    <img src="img/8dd73d1f0c691013496440454036ef7f8775a85b.jpg">
+                </div>
+                <div><img src="img/7cbfeaade9824c8096766be25b78ba92cf55bb56.jpg">
+                </div>
+                <div>
+                    <img src="img/61d6ac7734cbe6cdd2aa6bd59c1c2b99db0f4227.jpg">
+                </div>
+                <div>
+                    <img src="img/e2686c58d3b2879c85dea6ddb83943a14d9a1412.jpg">
+                </div>
+                <div>
+                    <img src="img/e89015a90723e3e1a8e8bdf2c87dc397f07a0962.jpg">
+                </div>
+               
+            </div> -->
+            <div>
+                <img src="img/9c514f5c2d7ae4bcf2373968146570914c0dfa07.jpg">
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        $.ajax({
+            type:"GET",
+            url:"header.html",
+            success:function(data){
+                $(".header").append($(data));
+            }
+        })
+        $(".footer").load("foot.html");
+        
+        $(function(){
+            $(".ih-item").hover(function(){
+                $(this).children(".ih-item-txt").show();
+            },function(){
+                $(this).children(".ih-item-txt").hide();
+            })
+
+
+            
+        })
+    </script>
+</body>
+</html>

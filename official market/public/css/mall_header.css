@@ -1,0 +1,348 @@
+body{
+    font-size: 12px;
+    font-family: "Microsoft YaHei",Tahoma, Helvetica, Arial, STXihei, SimSun, sans-serif;
+    color:#333;
+    font-style: normal;
+    font-weight:400;
+}
+/* 头部用户部分 */
+.user_top{
+    background:#f3f3f3;
+    width:100%;
+    line-height: 34px;
+    height:34px;
+    font-size: 12px;
+}
+.diving::after{
+    content: "|";
+    color:#ccc;
+}
+.user_top_inner{
+    width:1200px;
+    margin: 0 auto;
+}
+.diving{
+    display: inline-block;
+    height:33px;
+    width:12px;
+    margin-left:8px;
+}
+.user_top span a{
+    color:#000;
+}
+
+/* 头部中间-logo-导航栏-二维码 */
+.top_nav_box{
+    width:100%;
+    height:140px;
+    /* border-bottom: 4px solid grey; */
+}
+.top_nav_box .nav_inner{
+    width:1200px;
+    margin:0 auto;
+    position: relative;
+}
+.top_nav_box a .top_logo{
+    width:200px;
+}
+.top_nav_box .nav_inner input{
+    border:2px solid #d00a00;
+    width:480px;
+    height:28px;
+    margin-top:20px;
+    margin-left: 120px;
+}
+.top_nav_box .nav_inner button{
+    background: #d00a00;
+    width:80px;
+    margin-top:10px;
+    height:40px;
+    margin-left:-10px;
+}
+.hot_keys{
+    position: absolute;
+    left:330px;
+    top:80px;
+}
+.hot_keys a{
+    color:#666;
+}
+.top_nav_box .nav_inner .qr_code{
+    float: right;
+    margin-top:20px;
+    margin-right: 30px;
+}
+.nav_bar{
+    width:100%;
+    border-bottom:3px solid #d00a00;
+    height:36px;
+    position: relative;
+}
+.nav_bar_inner{
+    width:1200px;
+    /* border:1px solid red; */
+    height:36px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.all-category_inner{
+    background: #d00a00;
+    width:200px;
+    height:100%;
+    text-align: center;
+}
+
+.all-category a{
+    color:#fff;
+    font-size:14px;
+    line-height: 36px;
+}
+.nav-category a{
+    margin-left:38px;
+    line-height: 36px;
+    color:#000;
+    font-size: 14px;
+}
+.nav-category a:hover{
+    text-decoration-line: none;
+    color:#d00a00;
+}
+.category_box{
+    width:200px;
+    display: none;
+    position: absolute;
+    top:38px;
+}
+.cat-vertical{
+    background: #d00a00;
+    width:200px;
+    margin: 0px;
+    box-shadow:0px 8px 10px black;
+}
+.cat-vertical-item{
+    padding:5px;
+    padding-left:10px;
+    color:#fff;
+    border-top:#AB0808 1px solid;
+    font-size: 12px;
+}
+.cat-vertical-item a{
+    font-size: 12px;
+}
+.cat-vertical-item a:first-child{
+    font-size:14px;
+}
+.cat-vertical-item:hover{
+    background: #fff;
+}
+.cat-vertical-item:hover a{
+    color:gray;
+}
+.cat-vertical-item:hover a:first-child{
+    color:#000;
+}
+.cat-vertical-item:hover a:hover{
+    color:#d00a00;
+    text-decoration: none;
+}
+
+
+/* 主体部分 */
+.body{
+    background:#f8f8f8;
+    padding-bottom:10px;
+}
+.container{
+    width: 1200px;
+    margin:0 auto;
+    /* height:1000px; */
+    border:1px solid gray;
+}
+.container a{
+    color:#000;
+    text-decoration: none;
+}
+
+.bread-crumbs{
+    padding:14px 10px;
+    color:#000;
+    /* height:24px; */
+    border:1px solid red;
+}
+.bread-crumbs a{
+    color:#000;
+    text-decoration: none;
+}
+.gallery-mainl{
+    width: 200px;
+    border:1px solid red;
+    padding:10px 10px;
+    overflow: hidden;
+}
+.gallery-asidet{
+    width: 200px;
+}
+.gallery-asidet>div>h4{
+    margin:10px;
+}
+.gallery-asidet ul{
+    border-top:2px solid #000;
+    /* border-bottom: 1px solid #ddd; */
+    padding:10px;
+    background-color:#fff;
+}
+.gallery-asidet ul li{
+    line-height: 35px;
+    border-bottom:1px solid #eee;
+}
+
+.gallery-asidet>ul>li>div>span>i{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    color:#fff;
+    background:#ddd;
+    text-align: center;
+    margin-right:7px;
+    cursor: pointer;
+}
+.gallery-asidet>ul>li>div>span>i{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    color:#fff;
+    background:#ddd;
+    text-align: center;
+    margin-right:7px;
+    cursor: pointer;
+}
+.gallery-asidet ul li div a{
+    color:#666;
+    text-decoration: none;
+}
+.gallery-asidet ul li div a:hover{
+    color:#d00a00;
+}
+.gallery-asidet ul li dl dd a{
+    color:#999;
+    text-decoration: none;
+}
+.son{
+    padding:0px 0px 5px 26px;
+}
+
+.gallery-asidec{
+    width:200px;
+    background-color:#fff;
+}
+.gallery-asidec>div{
+    margin:10px;
+}
+.gallery-asidec ul{
+    border-top:2px solid #000;
+    padding: 10px;
+}
+.gallery-asidec ul li{
+    margin-top:10px;
+}
+.gallery-asidec>ul>li>p{
+    text-align: center;
+    font-size: 12px;
+    margin-top:10px;
+}
+.gallery-asidec>ul>li>p>a:hover{
+    color:#d00a00;
+}
+.gallery-asidec>ul>li>p>span,.gallery-asideb>ul>li>div span{
+    font-size: 16px;
+    color:#d00a00;
+    font-weight: bold;
+    display: block;
+    margin-top:10px;
+}
+
+.gallery-asideb{
+    margin-top:20px;
+}
+.gallery-asideb>div{
+    margin:10px;
+    
+}
+.gallery-asideb ul{
+    border-top:2px solid #000;
+}
+.gallery-asideb ul li{
+    padding-top:10px;
+    border-bottom: 1px solid #eee;
+    height:90px;
+}
+.gallery-asideb ul li div:first-child{
+    width:80px;
+    height: 50px;
+    float: left;
+}
+.gallery-asideb ul li div:last-child{
+    width:110px;
+    font-size: 10px;
+    float: right;
+}
+
+
+/* 主体种类导航 */
+.gallery-mainr{
+    width:975px;
+    /* border:1px solid red; */
+}
+.filter_container{
+    width:950px;
+    margin: 10px;;
+    border:1px solid #d3d3d3;
+}
+.filter_container .filter-title{
+    background-color:#ddd;
+    padding:6px 10px;
+}
+
+.filter_selected{
+    background: #f3f3f3;
+    padding:6px 10px;
+}
+.filter_lists{
+    /* padding:6px 10px; */
+}
+.filter_lists dl{
+    /* padding:6px 10px; */
+    border-bottom:1px dotted #ddd;
+    margin:10px;
+    
+}
+.filter_lists dl dt{
+    padding:5px;
+    margin:5px 0px;
+    width:60px;
+    text-align: right;
+    float: left;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 8px;
+}
+.filter_lists dl dd{
+    padding:5px;
+    float: left;
+    line-height: 8px;
+    font-size: 10px;
+    color:#8B8B8B;
+    margin:5px 8px;
+    /* border: 1px solid red; */
+}
+.filter_lists>div{
+    margin:10px;
+    margin-left:40px;
+}
+
+.gallery_sortbar{
+    padding-left:20px;
+    padding-right: 20px;
+}

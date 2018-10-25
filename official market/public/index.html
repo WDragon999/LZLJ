@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div ></div>
+    <div id="banner" height="565"></div>
+    <div class="index_hot">
+        <div class="row">
+            <div class="ih-item">
+                <a href="#"><img src="img/go1.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                    <h4 class="hhhhhh">口粮酒</h4>
+                    <p>爆冷推荐</p>
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/go2.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                    <h4>口粮酒</h4>
+                    <p>爆冷推荐</p>
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/go3.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                    <h4>口粮酒</h4>
+                    <p>爆冷推荐</p>
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/go4.jpg" alt=""></a>
+                <div class="ih-item-txt">
+                    <h4>口粮酒</h4>
+                    <p>爆冷推荐</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="img/a32df701be51fe728be5012d840c61d9bdae4515.jpg" alt="">
+        <img src="img/a4bd4a6c753d005902b97c6f63c52e3609507b8f.jpg" alt="">
+        <img src="img/0784ef7cf565285ccf9a198295bc738c01308e6b.jpg" alt="">
+        <img src="img/e55e64e4495180dcb5735864080fbe202c803d36.jpg" alt="">
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        $.ajax({
+            type:"GET",
+            url:"header.html",
+            success:function(data){
+                $(".header").append($(data));
+            }
+        })
+        $("#banner").load("index_banner.html")
+        $(".footer").load("foot.html")
+        $(function(){
+            $(".ih-item").hover(function(){
+                $(this).children(".ih-item-txt").show();
+                // $(this).children(".hhhhhh").animate({left:"50px"},800);
+                // console.log(1)
+            },function(){
+                $(this).children(".ih-item-txt").hide();
+                // $(this).children(".ih-item-txt").css({top:"-50px"},800)
+                // console.log(2);
+            })
+
+
+            
+        })
+    </script>
+</body>
+</html>

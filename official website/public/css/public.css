@@ -1,0 +1,158 @@
+.middle{
+    /* width: 1366px; */
+    width:70%;
+    margin:0 auto;  
+    /* min-width:1300px; */
+}
+/* .container{
+    margin:0 auto;  
+} */
+.site{
+    height:40px;
+    background:#282D31;
+    color:#D2A052;
+}
+.site span{
+    line-height: 40px;
+}
+.content{
+    background: url(../images/contentsbg.png) top center no-repeat #ECECE2;
+    padding: 50px 140px 70px;
+    margin: 1px 0px 0px;
+    overflow: hidden;
+    /* width: 1012px; */
+}
+.nb_tit p{
+    font-size: 20px;
+}
+.nb_tit span{
+    display: block;
+    width:50px;
+    height:1px;
+    background: #d5b071;
+    margin-top:10px;
+}
+.nb_tit a{
+    display: block;
+    width:58px;
+    color:#d5b071;
+    border:1px solid #d5b071;
+    margin-top:20px;
+    padding:2px 14px 2px 5px;
+    background:url(../img/arr_yellow.png) 65px center no-repeat;
+    float: right;
+    margin-top:-30px;
+}
+
+.newsbox{
+    border-bottom: 3px solid #D2A052;
+    margin-bottom: 13px;
+    padding-bottom: 25px;
+}
+.speaciallist li span{
+    float:left;
+    position: relative;
+}
+.speaciallist{
+    margin-bottom:8px;
+    margin-top:10px;
+}
+.speaciallist li{
+    float: left;
+    /* width:100%; */
+    position: relative;
+    /* margin-bottom:8px; */
+    overflow: hidden;
+}
+.s_pic01,.s_pic01 img{
+    width:664px;
+    height:498px;
+}
+.s_pic02{
+    width:329px;
+    height:245px;
+    margin: 0px 0px 8px 8px;
+}
+.s_pic02 img{
+    width:329px;
+    height:245px; 
+}
+.s_pic03{
+    width:329px;
+    height:245px;
+    margin: 0px 0px 0px 8px;
+}
+.s_pic03 img{
+    width:329px;
+    height:245px;   
+}
+.news_first{
+    padding-bottom:30px;
+}
+.ndl{
+    width:460px;
+    background:#DEDECD;
+    padding:20px;
+    margin-top:20px;
+    min-width: 40%;
+}
+.ndl>img{
+    width:455px;
+    border:2px solid #fff;
+    margin-bottom:14px;
+}
+.ndl>p{
+    color:#D4AC69;
+    margin:15px 0px;
+}
+
+.ndl>a{
+    color:#D4AC69;
+    display: block;
+    margin-top:20px;
+}
+.nlist1 ul li{
+    margin:10px;
+}
+.nlist1 ul li img{
+    width:178px;
+    margin-right:10px;
+}
+.nlist1{
+    margin-top:20px;
+    margin-left:100px;
+    width:450px;
+    
+}
+.nlist1 img{
+    border:1px solid #fff;
+    margin-bottom:15px;
+}
+.nlist1 ul li{
+    margin-bottom:15px;
+    border-bottom:1px solid #D4AC69;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+.nlist1>ul>li>p{
+    color:#D4AC69;
+    margin:5px 0px;
+}
+.nlist1>ul>li>a{
+    color:#D4AC69;
+    display: block;
+    margin-top:5px;
+}
+.nlist1>ul>li>span{
+    font-size: 12px;
+}
+.n_img{
+    float:left;
+    width:165px;
+    height:133px;
+}
+.n_text{
+    float: right;
+    width:265px;
+    margin-right:-35px
+}

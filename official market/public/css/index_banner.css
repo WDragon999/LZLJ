@@ -1,0 +1,56 @@
+.banner_box{
+    position: relative;
+    height:565px;
+    overflow: hidden;
+}
+.banner{
+    height:565px;
+    overflow: hidden;
+    /* position: relative; */
+}
+.banner div{
+    display: none;
+    float: left;
+}
+.left,.right{
+    position: absolute;
+    top:300px;
+    background:#ccc;
+    text-align: center;
+    padding:20px 10px;
+    display: none;
+    opacity: 0.5;
+}
+.left{
+    left:20%
+}
+.right{
+    right:20%;
+}
+.banner_trigger{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    top:500px;
+    z-index: 100;
+}
+.trigger_list{
+    width:60px;
+    background: rgba(0,0,0,.25);
+    padding:6px 8px;
+    display: inline-block;
+    border-radius:20px;
+    text-align: center;
+    height:20px;
+}
+.trigger_item{
+    border-radius: 50%;
+    background:#fff;
+    display: inline-block;
+    width:12px;
+    height:12px;
+    cursor:pointer;
+}
+.active{
+    background:#333;
+}

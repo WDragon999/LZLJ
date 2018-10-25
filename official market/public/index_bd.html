@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国窖系列-泸州老窖官方商城</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gj1573.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div ></div>
+    <div height="565" width="100%">
+        <img src="img/bd_banner.jpg" alt="">
+    </div>
+    <div class="index_hot" style="background-color:#41249b;height:450px;">
+        <img src="img/brandshow_tit.png" alt="">
+        <div class="row">
+            <div class="ih-item">
+                <a href="#"><img src="img/bd_brand(1).jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/bd_brand(2).jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/bd_brand(3).jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+            <div class="ih-item">
+                <a href="#"><img src="img/bd_brand(4).jpg" alt=""></a>
+                <div class="ih-item-txt">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="wrapper">
+            <div class="wrapper_inner" style="text-align:center;width:100%;" >
+                <img src="img/bd_lsit(1).jpg" alt="">
+                <img src="img/bd_lsit(2).jpg" alt="">
+                <img src="img/bd_lsit(3).jpg" alt="">
+                <img src="img/bd_lsit(4).jpg" alt="">
+                <img src="img/bd_lsit(5).jpg" alt="">
+                <img src="img/bd_lsit(6).jpg" alt="">
+                <!-- <div>
+                    <img src="img/tequ_list(1).jpg">
+                </div>
+                <div>
+                    <img src="img/tequ_list(2).jpg" style="width:100%;">
+                </div>
+                <div>
+                    <img src="img/tequ_list(3).jpg" usemap="#tq-1">
+                    <map name="tq-1">
+                        </map>
+                </div>
+                <div><img src="img/tequ_list(4).jpg">
+                </div>
+                <div>
+                    <img src="img/tequ_list(5).jpg">
+                </div>
+                <div>
+                    <img src="img/tequ_list(6).jpg">
+                </div>
+                <div>
+                    <img src="img/tequ_list(7).jpg">
+                </div>
+                <div>
+                    <img src="img/tequ_list(8).jpg">
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        $.ajax({
+            type:"GET",
+            url:"header.html",
+            success:function(data){
+                $(".header").append($(data));
+            }
+        })
+        $(".footer").load("foot.html");
+        
+        $(function(){
+            $(".ih-item").hover(function(){
+                $(this).children(".ih-item-txt").show();
+            },function(){
+                $(this).children(".ih-item-txt").hide();
+            })
+
+
+            
+        })
+    </script>
+</body>
+</html>

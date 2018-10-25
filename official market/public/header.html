@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="user_top">
+        <span><a href="#">登录</a>|</span>
+        <span><a href="#">注册</a></span>
+        <span><a href="#">购物车</a></span>
+    </div>
+    <div class="top_nav_box">
+        <div class="nav_inner">
+            <a href="index.html"><img src="img/logo.jpg" alt="logo" class="top_logo"></a>
+            <input type="text" class="">
+            <button class="btn btn-danger">搜索</button>
+            <img src="img/phone_erweima.jpg" alt="erweima" class="qr_code">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index_gj1573.html">国窖1573</a></li>
+                <li><a href="index_jiaolinjiu.html">窖龄酒</a></li>
+                <li><a href="index_tequ.html">特曲</a></li>
+                <li><a href="index_touqu.html">头曲</a></li>
+                <li><a href="#">老窖藏品</a></li>
+                <li><a href="#">桃花醉</a></li>
+                <li><a href="#">所有商品</a></li>
+            </ul>
+            <div class="fixed"></div>
+        </div>
+        <ul class="nav_inner_list">
+            <li><a href="index_gj1573.html"><img src="img/gj1573.png" alt=""><p>国窖1573</p></a></li>
+            <li><a href="index_jiaolinjiu.html"><img src="img/jljiu.png" alt=""><p>窖龄酒</p></a></li>
+            <li><a href="index_tequ.html"><img src="img/teq.png" alt=""><p>特曲</p></a></li>
+            <li><a href="index_touqu.html"><img src="img/tq.png" alt=""><p>头曲</p></a></li>
+            <li><a href="index_gddz.html"><img src="img/gddz.png" alt=""><p>高端定制</p></a></li>
+            <li><a href="index_bd.html"><img src="img/bd.png" alt=""><p>百调</p></a></li>
+            <li><a href="index_rxtj.html"><img src="img/rxtj.png" alt=""><p>热销推荐</p></a></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function(){
+            var navoffset=$(".nav_inner_list").offset().top;
+            console.log(navoffset);
+            $(window).scroll(function(){
+                var scrollPos=$(window).scrollTop();
+                console.log(scrollPos);
+                if(scrollPos>=navoffset){
+                    $(".nav_inner_list").addClass("fixed"); 
+                }else{
+                    $(".nav_inner_list").removeClass("fixed"); 
+                }
+            })
+        })
+    </script>
+</body>
+</html>

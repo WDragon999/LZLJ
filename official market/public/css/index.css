@@ -1,0 +1,24 @@
+#banner{
+    height: 570px;
+}
+.index_hot{
+    width:100%;
+    height:315px;
+}
+.index_hot .row .ih-item{
+    float: left;
+    width:25%;
+    position: relative;
+    text-align: center;
+}
+.ih-item-txt{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0px;
+    display: none;
+    background:rgba(0,0,0,.5)
+}
+.ih-item-txt h4{
+    margin-top:50px;
+}

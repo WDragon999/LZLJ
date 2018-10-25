@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/server.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="wraper">
+        <div id="header"></div>
+    </div>
+
+    <div class="middle">
+        <div class="container">
+            <div class="site">
+                <span>当前位置：首页-服务</span>
+            </div>
+            <div class="brand_index_list">
+                <div class="content fixed">
+                    <div class="nb_tit">
+                        <a href="#">专卖店查询</a>
+                        <span></span>
+                    </div>
+                    <div >
+                        <a href="#" class="service_more">立即搜索</a>
+                        <img class="service_map" src="img/57fb32b25b4d6.png" alt="没有" >
+                    </div>
+                    <ul class="service_list">
+                        <li>
+                            <div class="service_text">
+                                <div class="nb_tit">
+                                    <a href="#">防伪查询</a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    查询泸州老窖产品真伪，请拨打服务热线4008881573选择2号键
+                                </p>
+                                <div>
+                                    查询泸州老窖产品真伪，请拨打服务热线4008881573选择2号键
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                            <a href="#">
+                                <img src="img/57fc64ae9e056.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="service_text">
+                                <div class="nb_tit">
+                                    <a href="#">网上商城</a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    让您轻松购买正品泸州老窖，品味浓香正宗
+                                </p>
+                                <div>
+                                    <a href="#" class="service_more">
+                                        了解更多
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="img/57fc64a45ce1d.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service_text">
+                                <div class="nb_tit">
+                                    <a href="#">联系片区</a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    泸州老窖遍及全国各省市地区品牌联系人信息
+                                </p>
+                                <div>
+                                    <a href="#" class="service_more">
+                                        了解更多
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                            <a href="#">
+                                <img src="img/57fc649946b55.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <div class="service_text">
+                                <div class="nb_tit">
+                                    <a href="#">客户平台</a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    泸州老窖所有经销商的家园
+                                </p>
+                                <div>
+                                    <a href="#" class="service_more">
+                                        了解更多
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="service_text service_b">
+                                <div class="nb_tit">
+                                    <a href="#">会员俱乐部</a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    以酒会友，一个真正属于泸州老窖会员们交流并为其提供福利的平台
+                                </p>
+                                <div>
+                                    <a href="#" class="service_more">
+                                        了解更多
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div id="footer"></div>
+    </footer>
+
+
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"header.html",
+                content:document.body,
+                success:function(sView){
+                    $("#header").append($(sView));
+                }
+            })
+            // $('#header').load('header.html');
+            $('#footer').load('footer.html');
+            
+        })   
+    </script>
+</body> 
+</html>

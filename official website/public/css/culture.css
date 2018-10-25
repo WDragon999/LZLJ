@@ -1,0 +1,102 @@
+.middle{
+    /* width: 1366px; */
+    width:70%;
+    margin:0 auto;  
+    /* min-width:1300px; */
+}
+/* .container{
+    margin:0 auto;  
+} */
+.site{
+    height:40px;
+    background:#282D31;
+    color:#D2A052;
+}
+.site span{
+    line-height: 40px;
+}
+.content{
+    background: url(../images/contentsbg.png) top center no-repeat #ECECE2;
+    padding: 50px 140px 70px;
+    margin: 1px 0px 0px;
+    overflow: hidden;
+    /* width: 1012px; */
+}
+.nb_tit p{
+    font-size: 20px;
+}
+.nb_tit span{
+    display: block;
+    width:50px;
+    height:1px;
+    background: #d5b071;
+    margin-top:10px;
+}
+.nb_tit a{
+    display: block;
+    width:58px;
+    color:#d5b071;
+    border:1px solid #d5b071;
+    margin-top:20px;
+    padding:2px 14px 2px 5px;
+    background:url(../img/arr_yellow.png) 65px center no-repeat;
+    float: right;
+    margin-top:-30px;
+}
+.content>div{
+    
+    padding:10px;
+}
+.culture_img{
+    margin-top:25px;
+    position: relative;
+    width:1000px;
+    height:500px;
+}
+.culture_txt{
+    /* background:rgb(0,0,0,0.6); */
+    background:url(../img/media_bg.png);
+    position: absolute;
+    width: 305px;
+    height: 235px;
+    bottom:10px;
+    left:20px;
+    color:#d2a052;
+    padding:40px 20px 0px 30px;
+}
+.culture_txt>p:first-child{
+    font-size: 20px;
+}
+.culture_txt a{
+    display: block;
+    color:#D4AC69;
+    text-decoration: underline;
+    padding-left:8px;
+    background: url(../img/arr_yellow.png) no-repeat left 7px; 
+}
+.culture_txt2{
+    color:#D4AC69;
+    position: absolute;
+    right:240px;
+    font-size: 20px;
+    top:20px;
+}
+.culture_txt3{
+    top:300px;
+}
+.topic{
+    position: relative;
+}
+.topic_list{
+    position: absolute;
+    left:60px;
+    top:300px;
+}
+.topic_list li{
+    float: left;
+    margin-right:3px;
+}
+.chunyang{
+    margin-left:-170px;
+    margin-bottom:-80px;
+}
