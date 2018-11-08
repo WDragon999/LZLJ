@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
+</head>
+<body>
+    <div class="user_top">
+        <div class="user_top_inner">
+            <div class="user_left fl">
+                <span>您好，欢迎来到泸州老窖商城！</span>
+                <span><a href="login.html">登录</a></span>
+                <span class="diving"></span>
+                <span><a href="signup.html">注册</a></span>
+            </div>
+            <div class="user_right fr">
+                <span><a href="#">我的订单</a></span>
+                <span class="diving"></span>
+                <span><a href="#">会员中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">帮助中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">我的购物车</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="login">11111</button> -->
+    <div class="small-page">
+        <div>
+            <a href="mall_index.html"><img src="img/logo.jpg" alt=""></a> 
+        </div>
+    </div>
+    <div class="signin-page-wrap">
+        <div class="fl">
+            <img src="img/login/login_background.jpg" alt="">
+        </div>
+        <div class="fr">
+            <h2>用户登录</h2>
+            <div class="signin">
+                <div>
+                    <input type="text" placeholder="用户名/邮箱地址/手机号" class="uname" name="uname"><br>
+                    <input type="text" placeholder="填写密码" class="upwd" name="upwd"><br>
+                    <input type="text" placeholder="填写验证码" name="vertify"><br>
+                    <p class="center"><img src="" alt="验证码图片"> <span>看不清楚换一个？</span></p>
+                    <input type="checkbox">记住账号
+                    <input type="checkbox">两周内自动登录
+                    <div class="login-btn">
+                        <!-- <button id="login">11111</button> -->
+                        <button id="login">登录</button><a href="#">忘记密码?</a>
+                    </div>
+                    <div class="account_entry">
+                        <p>【可使用合作网站账号快速登录】</p>
+                        <div class="denglu_icon">
+                            <a href="#" class="denglu_icon_qq">qq</a>
+                            <a href="#" class="denglu_icon_alipayquick">支付宝</a>
+                            <a href="#" class="denglu_icon_sina">微博</a>
+                            <a href="#" class="denglu_icon_wechat">微信</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="need_signup">
+                    <span>还不是会员？</span>
+                    <button class="fr"><a href="signup.html">免费注册</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/shopPosition.js"></script>
+    <div id="shopPosition">
+         <texts :qq="qq"></texts>
+         666
+    </div>  
+    <div id="foot"></div>
+    
+    <script>
+        $(function(){
+            $("#foot").load("foot.html");
+            $("#login").click(function(){
+               var uname = $(".uname").val();
+                console.log(uname);
+                var upwd = $(".upwd").val();
+                $.ajax({
+                    type:"post",
+                    url:"http://127.0.0.1:3030/users/signin",
+                    data:{uname,upwd},
+                    dataType:"json",
+                    success:function(data){
+                        if(data.ok==0||uname.length==0){
+                            // console.log(0)
+                            alert("用户名或密码错误");
+                        }else if(data.ok==1){
+                            // console.log(111)
+                            alert("登录成功，自动返回首页");
+                            if(location.search.indexOf("back=")!=-1){
+                                // console.log(1)
+                                // console.log(location.search.slice(6));
+                                location.href=location.search.slice(6);
+                            }else{
+                                // console.log(2)
+                                location.href="http://127.0.0.1:3030/index.html"
+                            }
+                        }else{
+                            alert("请检查用户名或密码")
+                        }
+                    }
+                })
+            })
+            
+           
+
+            // 右边弹出框
+            Vue.component("texts",{
+                props:['message'],
+                template:`
+                <div>
+                    <img src="img/shopPosition.png" usemap="#mapPosition">
+                    <map name="mapPosition">
+                        <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                        <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+                    </map>
+                </div>`, 
+                props:["qq"]
+            })
+            var shopPosition= new Vue({
+                el:"#shopPosition",
+                data:{},
+                methods:{
+                    qq(){
+                        alert("此功能暂未开放，敬请期待")
+                    }
+                }
+            })
+            console.log(999)
+            // var vm = new Vue({
+            //     el:".signin",
+            //     data:{},
+            //     methods:{
+            //         signup(){
+            //             if(location.search.indexOf("back=")!=-1){
+            //                 // console.log(location.search.slice(6));
+            //                 location.href="http://127.0.0.1:3030/signup.html?back="+location.search.slice(6);
+            //             }else{
+            //                 location.href="http://127.0.0.1:3030/signup.html";
+            //             }
+            //         }
+            //     }
+            // })
+        })
+    </script>
+</body>
+</html>

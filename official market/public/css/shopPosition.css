@@ -1,0 +1,15 @@
+#shopPosition{
+    position: fixed;
+    top:42%;
+    right: -147px;
+    width:172px;
+    height:156px;
+    z-index: 999;
+}
+
+
+#shopPosition:hover{
+    position: fixed;
+    top:42%;
+    right: 0px;
+}

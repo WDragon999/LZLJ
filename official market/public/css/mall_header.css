@@ -30,6 +30,23 @@ body{
 .user_top span a{
     color:#000;
 }
+#signin{
+    color:#000;
+    font-size: 14px;
+}
+#signin span:first-child{
+    margin-right: 5px;
+}
+#signin .uname{
+    color:#d00a00;
+}
+#signin a{
+    color: #000;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
 
 /* 头部中间-logo-导航栏-二维码 */
 .top_nav_box{
@@ -114,6 +131,7 @@ body{
     display: none;
     position: absolute;
     top:38px;
+    z-index: 1000;
 }
 .cat-vertical{
     background: #d00a00;
@@ -177,7 +195,7 @@ body{
 }
 .gallery-mainl{
     width: 200px;
-    border:1px solid red;
+    /* border:1px solid red; */
     padding:10px 10px;
     overflow: hidden;
 }
@@ -304,7 +322,9 @@ body{
     background-color:#ddd;
     padding:6px 10px;
 }
-
+.filter_container .filter-title span:last-child{
+    cursor: pointer;
+}
 .filter_selected{
     background: #f3f3f3;
     padding:6px 10px;
@@ -316,7 +336,6 @@ body{
     /* padding:6px 10px; */
     border-bottom:1px dotted #ddd;
     margin:10px;
-    
 }
 .filter_lists dl dt{
     padding:5px;
@@ -328,6 +347,7 @@ body{
     font-weight: 400;
     line-height: 8px;
 }
+
 .filter_lists dl dd{
     padding:5px;
     float: left;
@@ -336,13 +356,157 @@ body{
     color:#8B8B8B;
     margin:5px 8px;
     /* border: 1px solid red; */
+    cursor:pointer;
+}
+.filter_lists dl dd.active{
+    background-color:#d00a00;
+    border-radius: 2px;
+    color: #fff;
+}
+.filter_lists dl dd.active1{
+    background-color:#d00a00;
+    border-radius: 2px;
+    color: #fff;
 }
 .filter_lists>div{
     margin:10px;
     margin-left:40px;
 }
+.price{
+    position: relative;
+}
+.price_input_box{
+    position: absolute;
+    left:560px;
+    top:-16px;
+    border: 1px solid transparent;
+    padding: 10px;
+   
+}
+.price_input_box:hover{
+    border: 1px solid #999;
+    z-index: 99;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+.price_input_box:hover .price_clear{
+    display: inline-block;
+}
+.price_input_box:hover .price_select{
+    display: inline-block;
+}
+.price_input_box button.price_clear{
+    border:none;
+    background-color: #d00a00;
+    color: #fff;
+    padding:2px 5px;
+    border-radius: 3px;
+    margin-left: 14px;
+    display: none;
+}
+.price_input_box button.price_select{
+    border:1px solid #ddd;
+    background-color: #fefefe;
+    color: #666;
+    padding:2px 5px;
+    border-radius: 3px;
+    margin-left: 28px;
+    display: none;
+}
+.price .price_input{
+    width: 50px;
+    height: 12px;
+    margin-top: 3px;
+    /* padding-right: 50px; */
+    padding: 5px;
+    outline: none;
+}
+.price span{
+    color:#999;
+}
+.more{
+    cursor:pointer;
+}
+.filter_hide{
+    display: none;
+}
+
 
 .gallery_sortbar{
-    padding-left:20px;
-    padding-right: 20px;
+    padding:8px 20px;
+    /* padding-left:20px;
+    padding-right: 20px; */
+    border:1px solid #ddd;
+    background-color:#f3f3f3;
+}
+
+.gallery_grid{
+    width:975px;
+    overflow: hidden;
+    /* border:1px solid red; */
+    padding:10px;
+}
+.gallery_grid .goods-item{
+    width:225px;
+    float: left;
+    /* padding:10px; */
+    height:340px;
+    margin-right:15px;
+    background: #fff;
+    margin-bottom:15px;
+    /* box-shadow: 0px 0px 2px #000; */
+}
+.gallery_grid .goods-item:hover{
+    box-shadow: 0px 0px 5px 1px #ccc;
+    
+}
+.goods-pic img{
+    width: 210px;
+    height:210px;
+    margin:5px;
+}
+.goods-info{
+    font-size: 10px;
+    padding:6px;
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.goods-info a:hover{
+    color:#d00a00;
+
+}
+.goods-price span:first-child{
+    color:#d00a00;
+    font-weight: 700;
+    margin-left:6px;
+    font-size: 16px;
+}
+.goods-price span:last-child{
+    color:#999;
+    font-weight: 400;
+    margin-right:5px;
+    font-size: 8px;
+}
+.goods-button{
+    height: 30px;
+    padding: 10px;
+}
+.goods-button .cart{
+    border:none;
+    color:#fff;
+    background: #d00a00;
+    padding:3px 10px;
+    border-radius: 5px;
+    outline: none;
+}
+.goods-button .collect{
+    color: #666;
+    background: #d00a00;
+    padding:3px 10px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-image: linear-gradient(#fefefe, #f3f3f3);
+    margin-left: 10px;
 }

@@ -16,6 +16,33 @@
 .user_top span a{
     color:#ddd;
 }
+#signin .uname{
+    background:url(../img/user.png) no-repeat;
+    padding-left:24px;
+    color: #d00a00;
+    margin-right: 10px;
+}
+#signin a{
+    color:#fff;
+    margin-right: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+#signin .cart{
+    background:url(../img/cart.png) no-repeat -2px;
+    padding-left:24px;
+    margin-left: 10px;
+    color: #fff;
+}
+#signout .btn_login{
+    background: url(../img/user.png) no-repeat 5px;
+    padding-left:30px;
+}
+#signout .cart{
+    background: url(../img/cart.png) no-repeat 5px;
+    padding-left: 30px;
+}
+
 
 /* 头部中间-logo-导航栏-二维码 */
 .top_nav_box{
@@ -99,4 +126,3 @@
     z-index: 10000;
     background: rgba(255,255,255,.5);
 }
-

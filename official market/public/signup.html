@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/666.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
+</head>
+<body>
+    <div class="user_top">
+        <div class="user_top_inner">
+            <div class="user_left fl">
+                <span>您好，欢迎来到泸州老窖商城！</span>
+                <span><a href="#" @click.prevent="signin">登录</a></span>
+                <span class="diving"></span>
+                <span><a href="#" @click.prevent="signup">注册</a></span>
+            </div>
+            <div class="user_right fr">
+                <span><a href="#">我的订单</a></span>
+                <span class="diving"></span>
+                <span><a href="#">会员中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">帮助中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">我的购物车</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="small-page">
+        <div>
+            <a href="mall_index.html"><img src="img/logo.jpg" alt=""></a> 
+        </div>
+    </div>
+    <div class="signup-page-wrap ">
+        <table></table>
+        <div class="section">
+                <h2>用户注册</h2>
+            <div class="signup-article fl">
+                    <!-- action="http://127.0.0.1:3030/users/signup" method="get" class="" -->
+                <div>
+                    <ul>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                <em class="warn">*</em>
+                                用户名：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="text" placeholder="请输入3~16个用户名" name="uname" v-model="uname"  maxlength="16" @blur="checkUname">
+                                <span class="caution" :style="unameStyle">
+                                    <span class="caution-content">
+                                        请填写3~16个字符的用户名
+                                    </span>
+                                </span>
+                                <span class="check_uname1">用户名可用</span>
+                                <span class="check_uname2">用户名已存在</span>
+                            </span>
+                        </li>
+                        <li class="form-item" id="myform">
+                            <label for="" class="form-label">
+                                <em class="warn">*</em>
+                                密码：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="password" placeholder="6-20个字符" name="upwd" v-model="upwd" maxlength="20" id="myPassword">
+                                <span class="caution" :style="upwdStyle">
+                                    <span class="caution-content">
+                                        请填写6~20位字符的密码
+                                    </span>
+                                </span>
+                            </span>
+                            <div class="fixed"></div>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                <em class="warn">*</em>
+                                确认密码：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="password" placeholder="再次填写密码" name="upwd_again" maxlength="20" v-model="upwd_again">
+                                <span class="caution" :style="upwd_againStyle">
+                                    <span class="caution-content">
+                                        密码与确认密码不相符，请重新填写
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                邮箱：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="email" name="email" maxlength="32" v-model="email">
+                                <span class="caution">
+                                    <span class="caution-content">
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                <em class="warn">*</em>
+                                手机号：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="text" placeholder="请填写您的手机号" name="phone" maxlength="11" v-model="phone">
+                                <span class="caution" :style="phoneStyle">
+                                    <span class="caution-content">
+                                        请填写正确的手机号码
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                真实姓名：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="text" placeholder="请输入您的真实姓名" name="user_name" maxlength="32" v-model="user_name">
+                                <span class="caution">
+                                    <span class="caution-content">
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                出生日期：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="date" placeholder="请输入3~16个用户名" name="birthday" maxlength="32" v-model="birthday">
+                                <span class="caution">
+                                    <span class="caution-content">
+                                       
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                性别：
+                            </label>
+                            <span class="form-act">
+                                <select name="gender" id="gender" v-model="gender">
+                                    <option value="-1">保密</option>
+                                    <option value="1">男</option>
+                                    <option value="0">女</option>
+                                </select>
+                               
+                                <span class="caution">
+                                    <span class="caution-content">
+                                        
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item">
+                            <label for="" class="form-label">
+                                验证码：
+                            </label>
+                            <span class="form-act">
+                                <input class="x-input" type="text" placeholder="请输入验证码" maxlength="16">
+                                <span class="caution">
+                                    <span class="caution-content">
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="form-item center">
+                            <a class="btn-caution send-mobile-vcode">
+                                <span>获取短信识别码</span>
+                            </a>
+                        </li>
+                        <li class="form-item deal">
+                            <input type="checkbox">我已阅读并同意
+                            <a href="#">会员注册协议</a>和
+                            <a href="#">隐私保护政策</a>
+                            
+                        </li>
+                        <li class="form-item btn_submit">
+                            <input type="button" value="注册" @click="signup">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="signup-aside fl">
+                <h4>已有会员账号请直接登录</h4>
+                <button><a href="login.html">转到登录页面</a></button>
+            </div>
+        </div>
+    </div>
+    <div id="shopPosition">
+            <texts :qq="qq"></texts>
+       </div> 
+    <div id="foot">
+
+    </div>
+    <script>
+        $(function(){
+            $("#foot").load("foot.html");
+            var $uname = $(".form-item input[name=uname]").val();
+            var $upwd = $(".form-item input[name=upwd]").val();
+            var $upwd_again = $(".form-item input[name=upwd_again]").val();
+            var $email = $(".form-item input[name=email]").val();
+            var $phone = $(".form-item input[name=phone]").val();
+            var $user_name = $(".form-item input[name=user_name]").val();
+            var $birthday = $(".form-item input[name=birthday]").val();
+            var $gender = $(".form-item select[name=gender]").val();
+            // 用户注册信息验证
+            function checkUpwd(){
+                // var $upwd = $(".form-item input[name=upwd]").val();
+                // var $upwd_again = $(".form-item input[name=upwd_again]").val();
+                // // console.log($upwd);
+                // // console.log($upwd.length);
+                // // console.log($upwd_again);
+                // // console.log( $upwd.legnth >=6 && $upwd == $upwd_again )
+                // if( $upwd.length >= 6 && $upwd == $upwd_again ){
+                //     this.isRegister=true;
+                //     console.log(123)
+                //     // console.log("1"+++this.isRegister)
+                // }else{
+                //     this.isRegister=false;
+                //     // alert("请检查密码")
+                //     console.log(this.isRegister)
+                //     console.log(456)
+                // }
+            }
+            var vm = new Vue({
+                el:".signup-article",
+                data:{
+                    uname:"",
+                    upwd:"",
+                    upwd_again:"",
+                    email:"",
+                    phone:"",
+                    user_name:"",
+                    birthday:"",
+                    gender:"",
+                    unameStyle:{display:"none"},
+                    upwdStyle:{display:"none"},
+                    upwd_againStyle:{display:"none"},
+                    phoneStyle:{display:"none"},
+                    isRegister:false
+                },
+                methods:{
+                    signup(){
+                        var $uname = $(".form-item input[name=uname]").val();
+                        var $upwd = $(".form-item input[name=upwd]").val();
+                        var $upwd_again = $(".form-item input[name=upwd_again]").val();
+                        var $email = $(".form-item input[name=email]").val();
+                        var $phone = $(".form-item input[name=phone]").val();
+                        var $user_name = $(".form-item input[name=user_name]").val();
+                        var $birthday = $(".form-item input[name=birthday]").val();
+                        var $gender = $(".form-item select[name=gender]").val();
+                        var $upwd = $(".form-item input[name=upwd]").val();
+                       
+                        // console.log($upwd);
+                        // console.log($upwd.length);
+                        // console.log($upwd_again);
+                        // console.log( $upwd.legnth >=6 && $upwd == $upwd_again )
+                        if( $upwd.length >= 6 && $upwd == $upwd_again ){
+                            this.isRegister=true;
+                            // console.log(123)
+                            // console.log("1"+++this.isRegister)
+                        }else{
+                            this.isRegister=false;
+                            // alert("请检查密码")
+                            // console.log(this.isRegister)
+                            // console.log(456)
+                        }
+                        // console.log(222)
+                        // console.log(this.isRegister)
+                        if(this.isRegister==true){
+                            // console.log(666666)
+                            // console.log(this.isRegister)
+                            $.ajax({
+                                url:"http://127.0.0.1:3030/users/signup",
+                                type:"post",
+                                data:{ $uname,$upwd,$email,$phone,$user_name,$birthday,$gender },
+                                dataType:"json",
+                                success:function(data){
+                                    console.log(data)
+                                    if(data.ok==1){
+                                        // location.href="http://127.0.0.1:3030/login.html";
+                                    }
+                                }
+                            })
+                        }else{
+                            alert("请检查注册信息")
+                        }
+                    },
+                    checkUname(){
+                        var $uname = $(".form-item input[name=uname]").val();
+                        $(".check_uname1").hide();
+                        $(".check_uname2").hide();
+                        console.log(111);
+                        if($uname.length>=3){
+                            $.ajax({
+                                url:"http://127.0.0.1:3030/users/uname",
+                                type:"get",
+                                data:{$uname},
+                                success:(data)=>{
+                                    if(data.code==0){   //可用
+                                        this.isRegister=true;
+                                        // console.log(this.isRegister);
+                                        $(".check_uname1").show();
+                                        $(".check_uname2").hide();
+                                    }else if(data.code==1){     //用户名存在
+                                        $(".check_uname1").hide();
+                                        $(".check_uname2").show();
+                                        this.isRegister=false;   
+                                    }
+                                }
+                            })
+                        }
+                    },
+                    // checkPhone(){
+                    //     var 
+                    // }
+
+                },
+                watch:{
+                    uname(){
+                        // console.log(this.uname)
+                        if(this.uname.length<3||this.uname.length>16){
+                            this.unameStyle={display:"inline"}
+                        }else 
+                            this.unameStyle={display:"none"}
+                    },
+                    upwd(){
+                        if(this.upwd.length<6){
+                            this.upwdStyle={display:"inline"}
+                            // console.log(000);
+                        }else{
+                            this.upwdStyle={display:"none"}
+                            // console.log(0000);
+                        }
+                    },
+                    upwd_again(){
+                        var pwd_val=$("input[name=upwd]").val();
+                        if(this.upwd_again!=pwd_val){
+                            this.upwd_againStyle={display:"inline"};
+                            this.isRegister=false;
+                        }else{
+                            this.upwd_againStyle={display:"none"};
+                            this.isRegister=true;                            
+                        }
+                    },
+                    phone(){
+                        if(this.phone.length<6){
+                            this.phoneStyle={display:"inline"}
+                            console.log(111)
+                            // console.log(000);
+                        }else{
+                            this.phoneStyle={display:"none"}
+                            console.log(0000);
+                        }
+                    }
+                }
+            })
+
+
+            // 右边弹出框
+            Vue.component("texts",{
+            props:['message'],
+            template:`
+            <div>
+                <img src="img/shopPosition.png" usemap="#mapPosition">
+                <map name="mapPosition">
+                    <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                    <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+                </map>
+            </div>`, 
+            props:["qq"]
+            })
+            new Vue({
+                el:"#shopPosition",
+                data:{},
+                methods:{
+                    qq(){
+                        alert("此功能暂未开放，敬请期待")
+                    }
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/strength.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+
+</body>
+</html>

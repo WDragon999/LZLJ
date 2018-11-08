@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mall_header.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_888690_lqqax8c4sie.css"> -->
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="user_top">
+        <div class="user_top_inner">
+            <div class="user_left fl">
+                <div id="signin">
+                    <span>您好</span>
+                    <span class="uname"></span>&nbsp;!
+                    <a href="#" @click.prevent="signout">退出</a>
+                </div>
+                <div id="signout">
+                    <span>您好，欢迎来到泸州老窖商城！</span>
+                    <span><a href="#" @click.prevent="signin">登录</a></span>
+                    <span class="diving"></span>
+                    <span><a href="#">注册</a></span>
+                </div>
+            </div>
+            <div class="user_right fr">
+                <span><a href="#">我的订单</a></span>
+                <span class="diving"></span>
+                <span><a href="#">会员中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">帮助中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">我的购物车</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="top_nav_box">
+        <div class="nav_inner">
+            <a href="index.html"><img src="img/logo.jpg" alt="logo" class="top_logo"></a>
+            <input type="text">
+            <button class="btn btn-danger">搜索</button>
+            <img src="img/mall_guanwei.png" alt="erweima" class="qr_code">
+            <div class="hot_keys">
+                <a href="mall_index.html?veriety=gj1573">国窖1573</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=tequ">特曲</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=jiaolin">窖龄30年</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=touqu">头曲</a>  
+            </div>
+            <div class="fixed"></div>
+        </div>
+        <div class="nav_bar">
+            <div class="nav_bar_inner">
+                <div class="all-category fl">
+                    <div class="all-category_inner" >
+                        <a href="#">全部商品分类</a>   
+                    </div>
+                    <div class="category_box">
+                        <ul class="cat-vertical" >
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">国窖1573</a><br>
+                                <a>经典系列</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=jiaolin">窖龄</a><br>
+                                <a>窖龄30年</a>
+                                <a>窖龄60年</a>
+                                <a>窖龄90年</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=tequ">特曲</a><br>
+                                <a>经典系列</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=touqu">头曲</a><br>
+                                <a>畅销中国60年</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">高端定制</a><br>
+                                <a>高端定制</a>
+                                <a>常规定制</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=bd">百调</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">热销推荐</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">桃花醉</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=erqu">二曲</a><br>
+                                <span>二曲系列</span>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">养生酒</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">大曲</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=ljcp">泸小二</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">红酒</a><br>
+                                <a>幸福雷恩</a>
+                                <a>希拉谷</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">啤酒</a><br>
+                                <a>奥普蓝</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">玛格丽特葡萄汁</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">其他</a><br>
+                                <a>热销推荐</a><br>
+                                <a>精品（含啤酒、红酒、凉茶）</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">配件</a><br>
+                                <a>酒具</a>
+                                <a>烟灰缸</a>
+                                <a>茶具</a>
+                                <a>鼠标垫</a>
+                                <a>茶</a>
+                                <a>牛肉</a>
+                                <a>杯子</a>
+                                <a>U盘</a>
+                                <a>滴滴代驾券</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=bd">百调512活动</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=ljcp">官方留藏</a><br>
+                                <a>特曲系列</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-category fl">
+                    <a href="mall_index.html?veriety=gj1573">首页</a>
+                    <a href="mall_index.html?veriety=gj1573">国窖1573</a>
+                    <a href="mall_index.html?veriety=jiaolin">窖龄酒</a>
+                    <a href="mall_index.html?veriety=tequ">特曲</a>
+                    <a href="mall_index.html?veriety=touqu">头曲</a>
+                    <a href="mall_index.html?veriety=ljcp">老窖藏品</a>
+                    <a href="mall_index.html?veriety=thz">桃花醉</a>
+                    <a href="mall_index.html?veriety=veriety">所有商品</a>
+                    <a href="mall_index.html?veriety=bd">百调</a>
+                    <a href="mall_index.html?veriety=gj1573">热销推荐</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed"></div>
+    <div class="body">
+        <div class="container">
+            <div class="bread-crumbs">
+                <span>您当前的位置：</span>
+                <a href="#">首页</a>
+            </div>
+            <div class="product_details" id="product_details">
+                <div class="product_details_inner">
+                    <div class="details_pic fl">
+                        <div class="details_big_pic">
+                            <div >
+                                <img :src=res[0].pic alt="">
+                            </div>
+                            <div class="glass">
+                                <a href="#">
+                                    <img src="img/放大镜.png" width="20" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="details_pic_list">
+                            <div class="pic_left fl">
+                                <div>
+                                    <button><img src="img/左箭头 (1).png" alt=""></button>
+                                </div>
+                            </div>
+                            <ul class="fl">
+                                <li class="list_item">
+                                    <img :src=res[0].pic alt="">
+                                </li>
+                            </ul>
+                            <div class=" pic_right fr">
+                                <div>
+                                    <button><img src="img/右箭头 (1).png" alt=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details_txt fr">
+                        <div class="det_txt_title">
+                            <h4>{{res[0].title}}</h4>
+                        </div>
+                        <div class="det_txt_price">
+                            <p>
+                                <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</span>
+                                <span>￥{{res[0].price}}.00</span>
+                            </p>
+                            <p>
+                                <span>商品货号：</span>
+                                <span>40003559</span>
+                            </p>
+                            <p>
+                                <span>可获积分：</span>
+                                <span>0</span>
+                            </p>
+                            <p>
+                                <span>已经出售：</span>
+                                <span>{{res[0].hasSold}}件</span>
+                            </p>
+                            <p>
+                                <span>消费保障：</span>
+                                <span>官方商城 正品保障 7*12小时客服</span>
+                            </p>
+                        </div>
+                        <div class="det_txt_sale">
+                            <span>商品促销</span>
+                            <p>减价：购买 52度国窖1573酒 500ml 单瓶满1099减219元</p>
+                        </div>
+                        <div class="det_txt_cart">
+                            <p class="num"><span>净含量：</span><span>新版经典装500ml*1</span></p>
+                            <p class="num">
+                                <span>数&nbsp;&nbsp;&nbsp;量：</span>
+                                <button>-</button>
+                                <input type="text" value="1">
+                                <button>+</button>
+                            </p>
+                            <button class="buy_now">￥立即购买</button>
+                            <button class="add_cart">加入购物车</button>
+                            <span>扫一扫购买<img src="img/二维码.png" alt=""></span>
+                            <p><span>分享到：</span>微信 新浪 QQ空间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="gallery-mainl fl">
+                <div class="gallery-asidet">
+                    <div>
+                        <h4>商品分类</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">国窖1573</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=gj1573">经典系列</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=tequ">特曲</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=tequ">经典系列</a></dd>
+                                <dd><a href="mall_index.html?veriety=tequ">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=jiaolin">窖龄酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=jiaolin">窖龄30年</a></dd>
+                                <dd><a href="mall_index.html?veriety=jiaolin">窖龄60年</a></dd>
+                                <dd><a href="mall_index.html?veriety=jiaolin">窖龄90年</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=touqu">头曲</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=gj1573">畅销中国60年</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">泸小二</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">高端定制</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=gj1573">高端定制</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">常规定制</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">养生酒</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">其它</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=gj1573">热销推荐</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">精品(含啤酒、红酒、凉茶)</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">配件</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=gj1573">酒具</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">烟灰缸</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">茶具</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">鼠标垫</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">茶</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">手提袋</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">牛肉</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">杯子</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">U盘</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">滴滴代驾券</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">其它</a></dd>
+                                <dd><a href="mall_index.html?veriety=gj1573">伞</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=ljcp">官方留藏</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=tequ">特曲系列</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=bd">红酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=thz">幸福雷恩</a></dd>
+                                <dd><a href="mall_index.html?veriety=thz">希拉谷</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=thz">啤酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="mall_index.html?veriety=tequ">奥普蓝</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=thz">大曲</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">玛格丽特葡萄汁</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=bd">百调</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=thz">桃花醉</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=bd">百调512活动</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="mall_index.html?veriety=gj1573">热销推荐</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery-asidec">
+                    <div>
+                        <h4>热卖推荐</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(1).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】【非卖品】【非卖品】</a><br>
+                                <span>￥0.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(2).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【赠品】HeartPanda限量熊猫</a><br>
+                                <span>￥299.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(3).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】【赠品】彩色酒杯套装 </a><br>
+                                <span>￥99.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(4).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】 白瓷酒具 一壶八杯</a><br>
+                                <span>￥99.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery-asideb">
+                    <div>
+                        <h4>猜你喜欢</h4>
+                    </div>
+                    <ul>
+                        <li class="fixed">
+                            <div class="fl">
+                                <img src="img/aside-cnxh(1).jpg" alt="">
+                            </div>
+                            <div class="fr">
+                                <p>
+                                    <a href="#">52度 泸州老窖猴年新春酒 500ml*2 含</a><br>
+                                    <span>￥398.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(2).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">52度 老窖醇香 经典窖藏9 500ml 泸州老</a><br>
+                                    <span>￥89.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(3).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">52度 老窖醇香 经典窖藏6 500ml 泸州老</a><br>
+                                    <span>￥59.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(4).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">泸州老窖三人炫酒 100ml*2 泸州老窖</a><br>
+                                    <span>￥78.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(5).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="">52度 老窖醇香 经典窖藏3 500ml*6 泸</a><br>
+                                    <span>￥39.00</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                
+                </div>
+            </aside>
+            <div class="details_comment fr">
+                <div class="details_comment_nav">
+                    <span>商品详情</span>
+                    <span><a href="#product_comment">商品评论(10)</a></span>
+                    <span><a href="#product_consult">商品咨询(78)</a></span>
+                </div>
+                <div class="product_attr">
+                    <ul>
+                        <li>品牌：泸州老窖</li>
+                        <li>所属分类：经典系列</li>
+                        <li>规格：500ml</li>
+                        <li>酒精度：52度</li>
+                        <li>香型：浓香型</li>
+                        <li>适用场合：礼品馈赠</li>
+                        <li>储藏方式： 常温 干燥 阴凉 避光</li>
+                        <li>配料表：水、高粱、小麦</li>
+                        <li>生产企业 ：泸州老窖股份有限公司</li>
+                        <li>商品编号：G56299FBD117F3</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="center">
+                        <img src="img/details/gj1573_details(1).jpg" alt="">
+                        <img src="img/details/gj1573_details(2).jpg" alt="">
+                       
+                        <img src="img/details/gj1573_details(4).jpg" alt="">
+                        <img src="img/details/gj1573_details(5).jpg" alt="">
+                        <img src="img/details/gj1573_details(6).jpg" alt="">
+                        <img src="img/details/gj1573_details(7).jpg" alt="">
+                        <img src="img/details/gj1573_details(8).jpg" alt="">
+                        <img src="img/details/gj1573_details(9).jpg" alt="">
+                        <img src="img/details/gj1573_details(10).jpg" alt="">
+                        
+                        
+                        
+                        <img src="img/details/gqxz(1).jpg" alt="">
+                        <img src="img/details/gqxz(2).jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+            </div>
+            <div class="comment_box fr" id="product_comment">
+                <div class="comment_top">
+                    商品评论
+                </div>
+                <div class="comment_grade">
+                    <div class="comment_grade_left fl">
+                        <h5>
+                            <span>商品评分</span>
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <span>4.9分</span>    
+                        </h5>
+                        <span>8</span>
+                        <span>人评分</span>
+                    </div>
+                    <div class="comment_grade_right comment_grade_left fl">
+                        <h5>
+                            <span>综合评分</span>
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <span>4.9分</span>
+                        </h5>
+                        <h5>
+                            <span>尺码</span>
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <span>4.9分</span>    
+                        </h5>
+                        <h5>
+                            <span>外观</span>
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <img src="img/details/start.png" alt="">
+                            <span>4.8分</span>    
+                        </h5>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+                <div class="comment_switchable">
+                    <ul>
+                        <li class="fl active">
+                            全部评论
+                        </li>
+                        <li class="fl">
+                            晒单评论
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <p class="comment_total">共<span>10</span>个评论
+                    <a href="#">查看全部评论</a>
+                </p>
+                <div class="comment_list">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="comment_box fr" id="product_consult">
+                <div class="comment_top">
+                    商品评论
+                </div>
+               
+                <div class="comment_switchable">
+                    <button>我要咨询</button>
+                </div>
+                <p class="comment_total">共<span>10</span>个评论
+                    <a href="#">查看全部评论</a>
+                </p>
+                <div class="comment_list">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="comment_list_user fl">
+                                <span class="level">白银5</span> 
+                                <p class="username">139****1918</p>
+                            </div>
+                            <div class="comment_list_content_box fl">
+                                <p class="discuss-lable">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <img src="img/details/start.png" alt="">
+                                    <span class="comment_date fr">2018-09-19 11:49</span>
+                                </p>
+                                <div class="discuss-content">
+                                    <p>包装草率，其他没问题，顶国窖</p>
+                                </div>
+                                <div class="reply-action">
+                                    <p>
+                                        <span>已有一条回复</span>
+                                        <a class="fr">[回复]</a>
+                                    </p>
+                                </div>
+                                <div class="reply-item">
+                                    <div class="reply-item-inner">
+                                        <p class="reply-lable">
+                                            <span>管理员</span>
+                                            <span>说</span>
+                                            <span class="fr">18-09-20 15:15</span>
+                                        </p>
+                                        <p class="reply-content">谢谢亲的支持，包装问题你可以 联系在线客服QQ800061573 ，我们会收集你的信息后向领导反馈， 改进我们包裹包装 。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shopPosition">
+        <texts :qq="qq"></texts>
+    </div> 
+    <div class="foot">
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        $(".all-category_inner,.category_box").hover(function(){
+            $(".category_box").show();
+        },function(){
+            $(".category_box").hide();
+        })
+        $(".foot").load("foot.html")
+
+        $(".gallery-asidet>ul>li>div>span>i").click(function(){
+            $(this).toggleClass(".icon-jiantouyou").toggleClass("icon-jiantouxia");
+            $(this).parent().parent().next().toggleClass("hidden");
+        })  
+
+
+
+        var reg = new RegExp("(^|&)" + "pid" + "=([^&]*)(&|$)"); // 构造一个含有目标参数的正则表达式对象
+        // var r = window.location.search.substr(1).match(reg);  // 匹配目标参数
+        var r ;
+        if(window.location.search.substr(1).match(reg)){
+            var r = window.location.search.substr(1).match(reg)[2];
+            console.log(r);
+        }
+        $.ajax({
+            type:"GET",
+            url:"/details",
+            data:{pid:r},
+            success:function(res){
+                console.log(res);
+                    var vm = new Vue({
+                    el:"#product_details",
+                    data:{res}
+                })
+            }
+        })
+
+        // 右边弹出框
+        Vue.component("texts",{
+        props:['message'],
+        template:`
+        <div>
+            <img src="img/shopPosition.png" usemap="#mapPosition">
+            <map name="mapPosition">
+                <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+            </map>
+        </div>`, 
+        props:["qq"]
+        })
+        new Vue({
+            el:"#shopPosition",
+            data:{},
+            methods:{
+                qq(){
+                    alert("此功能暂未开放，敬请期待")
+                }
+            }
+        })
+    </script>
+    <script src="js/login.js"></script>
+</body>
+</html>

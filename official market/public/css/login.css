@@ -1,0 +1,284 @@
+body{
+    font-size: 12px;
+    font-family: "Microsoft YaHei",Tahoma, Helvetica, Arial, STXihei, SimSun, sans-serif;
+    color:#333;
+    font-style: normal;
+    font-weight:400;
+    background-color: #f3f3f3;
+}
+/* 头部用户部分 */
+.user_top{
+    background:#f3f3f3;
+    width:100%;
+    line-height: 34px;
+    height:34px;
+    font-size: 12px;
+}
+.diving::after{
+    content: "|";
+    color:#ccc;
+}
+.user_top_inner{
+    width:1200px;
+    margin: 0 auto;
+}
+.diving{
+    display: inline-block;
+    height:33px;
+    width:12px;
+    margin-left:8px;
+}
+.user_top span a{
+    color:#000;
+}
+
+/* logo */
+.small-page{
+    width:100%;
+    background-color:#fff;
+    border-bottom: #ddd;
+    box-shadow: 2px 2px 5px #eaeaea;
+}
+/* logo */
+.small-page img{
+    width:240px;
+    height: 120px;
+    margin-left:500px;
+    margin-top:10px;
+}
+/* 中间登录模块 */
+.signin-page-wrap{
+    width:960px;
+    height:528px;
+    margin:80px auto 10px;
+}
+.signin-page-wrap h2{
+    color: #666;
+    font-weight: 600;
+}
+.signin{
+    width: 340px;
+    background-color: #fff;
+    border:1px solid #eaeaea;
+    margin-top: 10px;
+}
+
+/* 表单 */
+.signin>div{
+    border-bottom:1px solid #eaeaea;
+    padding-bottom: 15px;
+}
+/* 用户名\密码\验证码 */
+.signin input[type="text"]{
+    border:1px solid #eaeaea;
+    width:240px;
+    height: 36px;
+    margin:20px 30px 0px;
+    padding-left:40px;
+}
+.signin input[type="text"]:first-child{
+    background: url(../img/login/user.png) no-repeat 10px 6px;
+}
+.signin input[type="text"]:nth-child(3){
+    background: url(../img/login/password.png) no-repeat 10px 6px;
+}
+.signin input[type="text"]:nth-child(5){
+    background: url(../img/login/verification_code.png) no-repeat 10px 6px;
+}
+.signin p{
+    padding: 10px;
+    margin-left: 20px;
+}
+.signin input[type="checkbox"]{
+    margin-left:20px;
+}
+.signin .login-btn button{
+    background: #d00a00;
+    color: #fff;
+    padding:10px;
+    border:none;
+    width:120px;
+    height: 40px;
+    margin: 20px 0px 10px 40px;
+}
+.signin .login-btn a{
+    color: #666;
+    margin-left: 10px;
+}
+.account_entry p{
+    margin-left: 20px;
+    font-weight: 900;
+}
+.denglu_icon{
+    margin: 10px 40px;
+}
+.denglu_icon a{
+    display: inline-block;
+    /* width: 50px; */
+    border:1px solid #ccc;
+    color:#000;
+    text-align: right;
+    padding: 3px;
+    padding-left: 20px;
+}
+.denglu_icon_qq{
+    background: url(../img/login/qq.png)no-repeat -1px center;
+}
+.denglu_icon_alipayquick{
+    background: url(../img/login/alipayquick.png)no-repeat 2px center;
+}
+.denglu_icon_sina{
+    background: url(../img/login/sina.png)no-repeat 2px center;
+}
+.denglu_icon_wechat{
+    background: url(../img/login/wechat.png)no-repeat 2px center;
+}
+.need_signup{
+    padding:20px;
+}
+.need_signup span{
+    color:#d00a00;
+    font-size: 14px;
+}
+.need_signup button{
+    padding: 5px;
+    margin-top:-5px;
+    margin-right: 40px;
+    border: 1px solid #eaeaea;
+    background-image: linear-gradient(#f3f3f3, #e9e9e9);
+}
+
+/* #foot{
+    margin-top: 50px;
+} */
+
+
+
+
+
+
+
+/* 注册界面 */
+.signup-page-wrap{
+    width:100%;
+    /* height:528px; */
+    background-color: #f3f3f3;  
+}
+.section{
+    width:1000px;
+    /* border:1px solid #d00a00; */
+    height: 1000px;
+    margin:80px auto 0px;
+}
+.signup-article{
+    width: 600px;
+    background-color: #fff;
+    /* height: 600px; */
+    border: 1px solid #eaeaea;
+}
+.signup-article ul{
+    margin-top: 20px;
+}
+.form-item{
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom:20px;
+    overflow: inherit;
+    margin-left: 70px;
+    margin-bottom: 10px;
+}
+
+.form-label{
+    text-align: right;
+    width:100px;
+    display: inline-block;
+    font-size: 16px;
+}
+.warn{
+    color: #d00a00;
+}
+.form-act{
+    position: relative;
+    /* margin-left: 148px; */
+    padding: 9px 18px;
+    display: inline-block;
+    width: 278px;
+    border: 1px solid #e6e6e6;
+    height: 20px;
+    line-height: 22px !important;
+    background-color: #fff !important;
+}
+.x-input{
+    width: 242px;
+    border:none !important;
+    height: 20px;
+    line-height: 22px !important;
+    padding: 0;
+    outline: none;
+}
+.caution{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-size: 4px;
+    display: none;
+}
+.caution-content{
+    font-size: 6px;
+    color: #d00a00;
+    
+}
+.check_uname1{
+    position: absolute;
+    top:40px;
+    right: 10px;
+    display: none;
+}
+.check_uname2{
+    position: absolute;
+    top:40px;
+    right: 10px;
+    display: none;
+}
+
+.btn-caution{
+    display: block;
+    width: 180px;
+    height: 20px;
+    background-color: #d00a00;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    line-height: 20px;
+    margin-left: 100px;
+}
+.deal{
+    padding-left: 50px;
+}
+.btn_submit input{
+    width: 120px;
+    height: 38px;
+    background-color: #d00a00;
+    border: none;
+    color: #fff;
+    margin-left: 100px;
+}
+
+.signup-aside{
+    width:180px;
+    padding-left: 50px;
+}
+.signup-aside h4{
+    font-weight: 400px;
+}
+.signup-aside a{
+    color: #fff;
+}
+.signup-aside button{
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    background-color: #3898EA;
+    border: none;
+    margin-top: 20px;
+}

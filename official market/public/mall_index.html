@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mall_header__page.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <div class="user_top">
+        <div class="user_top_inner">
+            <div class="user_left fl">
+                <div id="signin">
+                    <span>您好</span>
+                    <span class="uname"></span>&nbsp;!
+                    <a href="#" @click.prevent="signout">退出</a>
+                </div>
+                <div id="signout">
+                    <span>您好，欢迎来到泸州老窖商城！</span>
+                    <span><a href="#" @click.prevent="signin">登录</a></span>
+                    <span class="diving"></span>
+                    <span><a href="signup.html">注册</a></span>
+                </div>
+            </div>
+            <div class="user_right fr">
+                <span><a href="#">我的订单</a></span>
+                <span class="diving"></span>
+                <span><a href="#">会员中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">帮助中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">我的购物车</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="top_nav_box">
+        <div class="nav_inner">
+            <a href="index.html"><img src="img/logo.jpg" alt="logo" class="top_logo"></a>
+            <input type="text">
+            <button class="btn btn-danger">搜索</button>
+            <img src="img/mall_guanwei.png" alt="erweima" class="qr_code">
+            <div class="hot_keys">
+                <a href="mall_index.html?veriety=gj1573">国窖1573</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=tequ">特曲</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=jiaolin">窖龄30年</a>
+                <span class="diving"></span>
+                <a href="mall_index.html?veriety=touqu">头曲</a>  
+            </div>
+            <div class="fixed"></div>
+        </div>
+        <div class="nav_bar">
+            <div class="nav_bar_inner">
+                <div class="all-category fl">
+                    <div class="all-category_inner" >
+                        <a href="#">全部商品分类</a>   
+                    </div>
+                    <div class="category_box">
+                        <ul class="cat-vertical" >
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=gj1573">国窖1573</a><br>
+                                <a>经典系列</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=jiaolin">窖龄</a><br>
+                                <a>窖龄30年</a>
+                                <a>窖龄60年</a>
+                                <a>窖龄90年</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=tequ">特曲</a><br>
+                                <a>经典系列</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=touqu">头曲</a><br>
+                                <a>畅销中国60年</a>
+                                <a>其他</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=bd">高端定制</a><br>
+                                <a>高端定制</a>
+                                <a>常规定制</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=bd">百调</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="#">热销推荐</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">桃花醉</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=erqu">二曲</a><br>
+                                <span>二曲系列</span>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">养生酒</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">大曲</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">泸小二</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">红酒</a><br>
+                                <a>幸福雷恩</a>
+                                <a>希拉谷</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">啤酒</a><br>
+                                <a>奥普蓝</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">玛格丽特葡萄汁</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">其他</a><br>
+                                <a>热销推荐</a><br>
+                                <a>精品（含啤酒、红酒、凉茶）</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">配件</a><br>
+                                <a>酒具</a>
+                                <a>烟灰缸</a>
+                                <a>茶具</a>
+                                <a>鼠标垫</a>
+                                <a>茶</a>
+                                <a>牛肉</a>
+                                <a>杯子</a>
+                                <a>U盘</a>
+                                <a>滴滴代驾券</a>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">百调512活动</a><br>
+                            </li>
+                            <li class="cat-vertical-item">
+                                <a href="mall_index.html?veriety=thz">官方留藏</a><br>
+                                <a>特曲系列</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-category fl">
+                    <a href="mall_index.html?veriety=">首页</a>
+                    <a href="mall_index.html?veriety=gj1573">国窖1573</a>
+                    <a href="mall_index.html?veriety=jiaolin">窖龄酒</a>
+                    <a href="mall_index.html?veriety=tequ">特曲</a>
+                    <a href="mall_index.html?veriety=touqu">头曲</a>
+                    <a href="mall_index.html?veriety=ljcp">老窖藏品</a>
+                    <a href="mall_index.html?veriety=thz">桃花醉</a>
+                    <a href="mall_index.html?veriety=">所有商品</a>
+                    <a href="mall_index.html?veriety=bd">百调</a>
+                    <a href="#">热销推荐</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed"></div>
+    <div class="body">
+        <div class="container" id="container">
+            <div class="bread-crumbs">
+                <span>您当前的位置：</span>
+                <a href="#">首页</a>
+            </div>
+            <aside class="gallery-mainl fl">
+                <div class="gallery-asidet">
+                    <div>
+                        <h4>商品分类</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">国窖1573</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">经典系列</a></dd>
+                                <dd><a href="#">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">特曲</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">经典系列</a></dd>
+                                <dd><a href="#">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">窖龄酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">窖龄30年</a></dd>
+                                <dd><a href="#">窖龄60年</a></dd>
+                                <dd><a href="#">窖龄90年</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">头曲</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">畅销中国60年</a></dd>
+                                <dd><a href="#">其它</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">泸小二</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">高端定制</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">高端定制</a></dd>
+                                <dd><a href="#">常规定制</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">养生酒</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">其它</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">热销推荐</a></dd>
+                                <dd><a href="#">精品(含啤酒、红酒、凉茶)</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i  class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">配件</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">酒具</a></dd>
+                                <dd><a href="#">烟灰缸</a></dd>
+                                <dd><a href="#">茶具</a></dd>
+                                <dd><a href="#">鼠标垫</a></dd>
+                                <dd><a href="#">茶</a></dd>
+                                <dd><a href="#">手提袋</a></dd>
+                                <dd><a href="#">牛肉</a></dd>
+                                <dd><a href="#">杯子</a></dd>
+                                <dd><a href="#">U盘</a></dd>
+                                <dd><a href="#">滴滴代驾券</a></dd>
+                                <dd><a href="#">其它</a></dd>
+                                <dd><a href="#">伞</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">官方留藏</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">特曲系列</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">红酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">幸福雷恩</a></dd>
+                                <dd><a href="#">希拉谷</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">啤酒</a>
+                            </div>
+                            <dl class="son hidden">
+                                <dd><a href="#">奥普蓝</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">大曲</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">玛格丽特葡萄汁</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">百调</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">桃花醉</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">百调512活动</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                        <li>
+                            <div>
+                                <span><i class="iconfont icon-jiantouyou"></i></span>
+                                <a href="#">热销推荐</a>
+                            </div>
+                            <dl class="son hidden">
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery-asidec">
+                    <div>
+                        <h4>热卖推荐</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(1).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】【非卖品】【非卖品】</a><br>
+                                <span>￥0.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(2).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【赠品】HeartPanda限量熊猫</a><br>
+                                <span>￥299.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(3).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】【赠品】彩色酒杯套装 </a><br>
+                                <span>￥99.00</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/aside_rmtj(4).jpg" alt=""></a>
+                            <p>
+                                <a href="#">【非卖品】 白瓷酒具 一壶八杯</a><br>
+                                <span>￥99.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gallery-asideb">
+                    <div>
+                        <h4>猜你喜欢</h4>
+                    </div>
+                    <ul>
+                        <li class="fixed">
+                            <div class="fl">
+                                <img src="img/aside-cnxh(1).jpg" alt="">
+                            </div>
+                            <div class="fr">
+                                <p>
+                                    <a href="#">52度 泸州老窖猴年新春酒 500ml*2 含</a><br>
+                                    <span>￥398.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(2).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">52度 老窖醇香 经典窖藏9 500ml 泸州老</a><br>
+                                    <span>￥89.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(3).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">52度 老窖醇香 经典窖藏6 500ml 泸州老</a><br>
+                                    <span>￥59.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(4).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="#">泸州老窖三人炫酒 100ml*2 泸州老窖</a><br>
+                                    <span>￥78.00</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="fixed">
+                            <div>
+                                <img src="img/aside-cnxh(5).jpg" alt="">
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="">52度 老窖醇香 经典窖藏3 500ml*6 泸</a><br>
+                                    <span>￥39.00</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                <!-- </li> -->
+                </div>
+            </aside>
+            <div class="gallery-mainr fr">
+                <div class="section">
+                    <div class="filter_container">
+                        <div class="filter-title clearfix">
+                            <span class="fl">商品筛选</span>
+                            <div class="fl">（共{{dataNum}}件商品）</div>
+                            <span class="fr" onclick="clearFilter()">重置筛选项</span>   
+                        </div>
+                        <div class="filter_selected">
+                            <p>您已选择：</p>
+                        </div>
+                        <div class="filter_lists">
+                            <dl class="fixed veriety">
+                                <dt>分类：</dt>
+                                <dd class="active">所有商品</dd>
+                                <dd>国窖1573</dd>
+                                <dd>窖龄酒</dd>
+                                <dd>特曲</dd>
+                                <dd>头曲</dd>
+                                <dd>老窖藏品</dd>
+                                <dd>桃花醉</dd>
+                                <dd>百调</dd>
+                                <dd>热销推荐</dd>
+                            </dl>
+                            <dl class="fixed alcohol">
+                                <dt>酒精度：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>12度</dd>
+                                <dd>22度</dd>
+                                <dd>38度</dd>
+                                <dd>42度</dd>
+                                <dd>45度</dd>
+                                <dd>46度</dd>
+                                <dd>50度</dd>
+                                <dd>52度</dd>
+                                <dd>53度</dd>
+                                <dd>55度</dd>
+                                <dd>60度</dd>
+                            </dl>
+                            <dl class="fixed pec">
+                                <dt>规格：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>5000ml</dd>
+                                <dd>3000ml</dd>
+                                <dd>2500ml</dd>
+                                <dd>1500ml</dd>
+                                <dd>750ml</dd>
+                                <dd>680ml</dd>
+                                <dd>625ml</dd>
+                                <dd>600ml</dd>
+                                <dd>520ml</dd>
+                                <dd>500ml</dd>
+                                <dd>375ml</dd>
+                                <dd>300ml</dd>
+                                <dd>275ml</dd>
+                                <dd>165ml</dd>
+                                <dd>125ml</dd>
+                                <dd>100ml</dd>
+                                <dd>50ml</dd>
+                            </dl>
+                            <dl class="fixed price">
+                                <dt>价格：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>1-99元</dd>
+                                <dd>100-299元</dd>
+                                <dd>300-499元</dd>
+                                <dd>500-999元</dd>
+                                <dd>1000-13500元</dd>
+                                <div class="price_input_box">
+                                    <input type="number" class="price_input" max = "88000" min="0">
+                                    <span> - </span>
+                                    <input type="number" class="price_input" max = "88000" min="0"><br>
+                                    <button class="price_clear" onclick="price_clear_btn()">清除</button> 
+                                    <button class="price_select" onclick="price_select_btn()">确定</button>
+                                </div>
+                            </dl>
+                            <dl class="fixed filter_hide">
+                                <dt>适用场合：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>礼品馈赠</dd>
+                                <dd>独酌慢饮</dd>
+                                <dd>家友聚会</dd>
+                                <dd>收藏珍品</dd>
+                            </dl>
+                            <dl class="fixed filter_hide">
+                                <dt>香型：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>浓香型</dd>
+                                <dd>浓香型&酱香型</dd>
+                            </dl>
+                            <dl class="fixed filter_hide">
+                                <dt>储藏方式：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>常温、干燥、阴凉、避光</dd>
+                            </dl>
+                            <dl class="fixed filter_hide">
+                                <dt>配料表：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>水、高粱、小麦</dd>
+                                <dd>水、高粱、小麦、大米</dd>
+                            </dl>
+                            <dl class="fixed filter_hide">
+                                <dt>生产企业：</dt>
+                                <dd class="active">不限</dd>
+                                <dd>泸州老窖股份公司</dd>
+                            </dl>
+                            <div>
+                                <span class="more">显示更多筛选项</span><i class="iconfont icon-xiangshangjiantou"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery_sortbar clearfix">
+                        <div class="fl">
+                            <button onclick="sort_default()">默认</button>
+                            <button onclick="sort_price()">价格</button>
+                            <button onclick="sort_hasSold()">销量</button>
+                        </div>
+                        <div class="fl">
+                            &nbsp;&nbsp;<span>排序：</span>
+                            <select name="" id="">
+                                <option value="默认">默认</option>
+                                <option value="按价格从高到低">按价格从高到低</option>
+                                <option value="按价格从低到高">按价格从低到高</option>
+                                <option value="">访问周次数</option>
+                                <option value="">总访问次数</option>
+                                <option value="">周购买次数</option>
+                                <option value="">总购买次数</option>
+                            </select>
+                            <input type="checkbox"><span>仅显示有货</span>
+                        </div>
+                        <div class="fr pageCount_top_box">
+                            <span>{{obj.pageNum[0]}}</span>/<span>{{obj.pageNum[1]}}</span>   
+                            <button @click="page_left()"><i class="iconfont icon-zuojiantou"></i></button>
+                            <button @click="page_right()"><i class="iconfont icon-youjiantou"></i></button>
+                        </div>
+                    </div>
+                    <div class="gallery_show">
+                        <div class="gallery_grid clearfix" id="gallery_grid">
+                            <ul>
+                                <li class="goods-item" v-for="item of res666">
+                                    <div class="goods-pic">
+                                        <a v-bind:href="'mall_product_details.html?pid='+item.pid"><img :src=item.pic alt=""></a>
+                                    </div>
+                                    <div class="goods-info">
+                                        <a v-bind:href="'mall_product_details.html?pid='+item.pid">{{item.title}}</a>
+                                    </div>
+                                    <div class="goods-price">
+                                        <span>￥{{item.price}}</span>
+                                        <span class="fr">已售：{{item.hasSold}}</span>
+                                    </div>
+                                    <div class="goods-button">
+                                        <button class="cart">加入购物车</button>
+                                        <button class="collect">收藏</button>
+                                    </div>
+                                </li>
+                                <div class="clearfix"></div>
+                                <div class="fr pageCount_bottom_box">
+                                    <button @click="page_left()"><i class="iconfont icon-zuojiantou"></i></button>
+                                    <span></span>
+                                    <!-- <button class="pageCount_num">1</button>
+                                    <button class="pageCount_num">2</button>
+                                    <button class="pageCount_num">3</button>
+                                    <button class="pageCount_num">4</button>
+                                    <button class="pageCount_num">5</button>
+                                    <button class="pageCount_num active">6</button> -->
+                                    <!-- `<button class="pageCount_num" @click="page_num_current(66)">66</button> -->
+                                    <button @click="page_right()"><i class="iconfont icon-youjiantou"></i></button>   
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shopPosition">
+        <texts :qq="qq"></texts>
+    </div> 
+    <div class="foot">
+
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+
+    // 头部红色导航栏下拉框
+        $(".all-category_inner,.category_box").hover(function(){
+            $(".category_box").show();
+        },function(){
+            $(".category_box").hide();
+        })
+
+
+    //商品筛选
+        //筛选项鼠标悬停添加active
+        $(".filter_lists dl dd").hover(
+            function () {
+                $(this).addClass("active1");
+            },
+            function () {
+                $(this).removeClass("active1");
+            }
+        );
+    //声明将要发送给服务器的参数数组对象
+        var obj = {
+            veriety:[],
+            pec:[],
+            price:[,,"none"],
+            alcohol:[],
+            hasSold:["none"],
+            pageNum:["1","1"]       //pageNum[0]是当前页数， pageNum[1]是总页数
+        }
+        //创建vue对象绑定筛选部分
+        var res666=[];
+        var dataNum =0;
+       
+        var vm = new Vue({
+            el:"#container",
+            data:{
+                res666,
+                dataNum,
+                obj
+            },
+            methods:{
+                page_left(){
+                    if(this.obj.pageNum[0]>1){
+                        this.obj.pageNum[0]--
+                    }
+                    // alert(obj.pageNum[0]); 
+                    this.obj={
+                        pageNum:[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`]
+                    }
+                    this.obj.pageNum[1]=`${Math.ceil(vm.dataNum/20)}`;
+                    
+                    // alert(this.obj.pageNum[0]); 
+                    filter_arguments();
+                    ajax_2();
+                    add_page_num_btn();
+                },
+                page_right(){
+                    if(this.obj.pageNum[0]<Math.ceil(vm.dataNum/20)){
+                        this.obj.pageNum[0]++
+                    }
+                    // alert(obj.pageNum[0]); 
+                    // this.obj={
+                    //     pageNum:[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`]
+                    // }
+
+                    this.obj.pageNum=[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`];
+                    // console.log(this.obj.pageNum[1]);
+                    // console.log(this.obj.pageNum[0]);
+                    // this.obj.pageNum[1]=`${Math.ceil(vm.dataNum/20)}`;   //修改方式不能被动态加载到页面上
+                    
+                    // alert(this.obj.pageNum[0]); 
+                    filter_arguments();
+                    // console.log(this.obj.pageNum[0]);                    
+                    ajax_2();
+                    // console.log(this.obj.pageNum[0]);
+                    add_page_num_btn();
+                    // console.log(this.obj.pageNum[0]);
+                },
+            },
+            beforeCreate(){     //第一次加载
+                console.log(999);
+                var reg = new RegExp("(^|&)" + "veriety" + "=([^&]*)(&|$)"); // 构造一个含有目标参数的正则表达式对象
+                // var r = window.location.search.substr(1).match(reg);  // 匹配目标参数
+                var r ;
+                if(window.location.search.substr(1).match(reg)){
+                    var r = window.location.search.substr(1).match(reg)[2];
+                    // console.log(r);
+                }
+                // var r = ["gj1573"]
+                switch(r){
+                    case "gj1573" :  $(".filter_lists dl.veriety").children().each(function(){
+                        // console.log($(this).eq(0).html());
+                        // console.log($(".filter_lists dl.veriety").eq(1).html());
+                        if($(this).eq(0).html()=="国窖1573"){
+                            $(this).addClass("active").siblings().removeClass("active");
+                        }
+                    }); break;
+                    case "jiaolin" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="窖龄酒"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "tequ" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="特曲"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "touqu" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="头曲"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "ljcp" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="老窖藏品"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "thz" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="桃花醉"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "bd" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="百调"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                    case "rxtj" :  $(".filter_lists dl.veriety").children().each(function(){
+                        if($(this).eq(0).html()=="热销推荐"){$(this).addClass("active").siblings().removeClass("active")}
+                    }); break;
+                }
+                // console.log(r);
+                $.ajax({    //第一次加载
+                    type:"GET",
+                    url:"/product",
+                    data:{veriety:r},
+                    success:function(res){
+                        // console.log(1223);
+                        // console.log(res.data);
+                        // console.log(res.$length);
+                       
+                            vm.res666 = res.data;
+                            vm.dataNum = `${res.$length}`;
+                            vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+                            // console.log(888);
+                     
+                        add_page_num_btn()
+                    }
+                })
+            }
+        })
+        
+    //页面加载之后ajax加载商品
+
+        // add_page_num_btn();
+
+
+
+
+
+        //创建获取页面参数的函数
+        function filter_arguments(){
+            //函数，获取dd中class为active的元素值，并返回result数组
+            function filter(cla){
+                var result = [];
+                $('.filter_lists dl.'+cla+' dd[class=active]').each(function(){
+                    var item = $(this).html();
+                    // console.log(item);
+                    result.push(item);
+                })
+                    // console.log(result);
+                    return result;
+            }
+            // console.log(obj);
+            obj.veriety = filter("veriety");
+            //遍历veriety数组，修改为简写便于服务器读取查询的数据
+            for(var i =0;i<obj.veriety.length;i++){
+                switch(obj.veriety[i]){
+                    case "所有商品" : obj.veriety[i]="all" ;break;
+                    case "国窖1573" : obj.veriety[i]="gj1573" ;break;
+                    case "窖龄酒" : obj.veriety[i]="jiaolin" ;break;
+                    case "特曲" : obj.veriety[i]="tequ" ;break;
+                    case "头曲" : obj.veriety[i]="touqu" ;break;
+                    case "老窖藏品" : obj.veriety[i]="ljcp" ;break;
+                    case "桃花醉" : obj.veriety[i]="thz" ;break;
+                    case "百调" : obj.veriety[i]="bd" ;break;
+                    case "热销推荐" : obj.veriety[i]="rxtj" ;break;
+                }
+            }
+            //酒品规格
+            obj.pec=filter("pec");
+            obj.pec=="不限"?obj.pec=["all"]:"";
+
+            //酒品价格，三种数据：最低价，最高价，升序/降序
+            // obj.price=filter("price");
+            
+            var price_min = $(".price .price_input:first").val();
+            if(price_min==""){
+                price_min = "0";
+            }
+            var price_max = $(".price .price_input:last").val();
+            if(price_max == ""){
+                price_max = "88000";
+            }
+            obj.price[0]=price_min;
+            obj.price[1]=price_max;
+            // var price_order = "none";
+            // var price_arr = [price_min,price_max,price_order]
+            // obj.price = price_arr;
+            //酒精度
+            obj.alcohol=filter("alcohol");
+            obj.alcohol=="不限"?obj.alcohol=["all"]:"";
+
+            //酒的销售量：升序/降序
+            // obj.hasSold="none";
+            // console.log(obj);
+        }
+
+        function ajax_1(){
+            obj.pageNum[0]="1";
+            $.ajax({
+                    url:"product_filter",
+                    type:"GET",
+                    data:{obj},
+                    success:function(res){
+                        // console.log(res);
+                        vm.res666 = res.data;
+                        vm.dataNum = `${res.$length}`;
+                        vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+                    }
+                })
+        }
+        function ajax_2(){
+            console.log(vm.obj);
+            $.ajax({
+                url:"product_filter",
+                type:"GET",
+                data:{obj},
+                success:function(res){
+                    // console.log(res);
+                    vm.res666 = res.data;
+                    vm.dataNum = `${res.$length}`;
+                    vm.obj.pageNum = [vm.obj.pageNum[0],Math.ceil(vm.dataNum/20)];
+                    // vm.obj.pageNum
+                    console.log(vm.res666)
+                    console.log(vm.dataNum)
+                    console.log(vm.obj.pageNum)
+                }
+            })
+        }
+
+        //点击筛选项事件--添加active，获取每个含有active的元素
+            $(".filter_lists dl:not(.price)  dd").click(function(){
+                // console.log(this);
+                $(this).toggleClass("active");
+                $(this).parent().children().eq(1).removeClass("active");
+                // console.log($(this).parent().children(".active").html());
+                if(!$(this).parent().children(".active").html()){   //如果该元素的所有兄弟元素都不包含active属性
+                    $(this).parent().children().eq(1).addClass("active");
+                }
+                if($(this).html()=="所有商品"||$(this).html()=="不限"){
+                    $(this).addClass("active").siblings().removeClass("active");
+                }
+                // alert(filter());
+                // console.log(filter());
+                //点击后ajax向服务器传递筛选数据返回结果修改到vue的数据中动态加载到页面里
+                // setTimeout(function(){      //定时器为了可以读取到包含完整的active属性数据
+                    
+                    filter_arguments();
+                    // $.ajax({
+                    //     url:"product_filter",
+                    //     type:"GET",
+                    //     data:{obj},
+                    //     success:function(res){
+                    //         // console.log(111);
+                    //         // console.log(res);
+                    //         // console.log(res.data);
+                    //         // console.log(res.$length);
+                    //         // console.log(222);
+                    //         vm.res666 = res.data;
+                    //         vm.dataNum = `${res.$length}`;
+                    //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+                    //     }
+                    // })
+                    ajax_1();
+                    add_page_num_btn();
+                // },300)
+            });
+
+            $(".price dd").click(function(){
+                $(this).toggleClass("active").siblings().removeClass("active");
+                $(this).parent().children().eq(1).removeClass("active");    //取消不限的active
+                // console.log($(this).parent().children(".active").html());
+                if(!$(this).parent().children(".active").html()){   //如果该元素的所有兄弟元素都不包含active属性
+                    $(this).parent().children().eq(1).addClass("active");
+                }
+                // alert($(this).html())
+                var $price_input = $(".price_input:first").text();
+                console.log($price_input);
+            
+                console.log($(".price dd.active").html());
+                switch($(this).html()){
+                    case "不限" :  $(".price_input:first").val("");
+                    $(".price_input:last").val("");break;
+                    case "1-99元" :  $(".price_input:first").val("1");
+                    $(".price_input:last").val("99");break;
+                    case "100-299元" :  $(".price_input:first").val("100");
+                    $(".price_input:last").val("299");break;
+                    case "300-499元" :  $(".price_input:first").val("300");
+                    $(".price_input:last").val("499");break;
+                    case "500-999元" :  $(".price_input:first").val("500");
+                    $(".price_input:last").val("999");break;
+                    case "1000-13500元" :  $(".price_input:first").val("1000");
+                    $(".price_input:last").val("13500");break;
+                }
+                if($(".price dd.active").html()=="不限"){
+                    $(".price_input:first").val("");
+                    $(".price_input:last").val("");
+                }
+                console.log($(".price dd.active").html());
+                
+                // setTimeout(function(){      //定时器为了可以读取到包含完整的active属性数据
+                    
+                    filter_arguments();
+
+                    // $(".price_input").html("666");
+                    // $.ajax({
+                    //     url:"product_filter",
+                    //     type:"GET",
+                    //     data:{obj},
+                    //     success:function(res){
+                    //         // console.log(res);
+                    //         vm.res666 = res.data;
+                    //         vm.dataNum = `${res.$length}`;
+                    //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+                    //     }
+                    // })
+                    ajax_1();
+                    add_page_num_btn();
+                // },100)
+            })
+        
+    //筛选下拉隐藏按钮
+        $(".more").click(function(){
+            $(this).next().toggleClass("icon-xiangshangjiantou").toggleClass("icon-xiangshangjiantou-copy-copy-copy");
+            if($(this).html()=="显示更多筛选项"){
+                $(this).html("收起更多筛选项");
+            }else{
+                $(this).html("显示更多筛选项");
+            }
+            if($(".filter_hide").css("display")=="none"){
+                $(".filter_hide").css("display","block");
+            }else{
+                $(".filter_hide").css("display","none");
+            }
+        })
+        // $(".filter_lists dl").eq(2)
+
+    //加载底部
+        $(".foot").load("foot.html")
+
+    //左侧边导航栏按钮效果 
+        $(".gallery-asidet>ul>li>div>span>i").click(function(){
+            $(this).toggleClass(".icon-jiantouyou").toggleClass("icon-jiantouxia");
+            $(this).parent().parent().next().toggleClass("hidden");
+        })
+
+
+    //元素点击事件的函数
+        function price_clear_btn(){
+            $(".price_input:first").val("");
+            $(".price_input:last").val("");
+            $(".price dd:first").attr("class","active").siblings().removeClass("active");
+        }
+        
+        function price_select_btn(){
+            filter_arguments();
+            ajax_1();
+            add_page_num_btn();
+            // $.ajax({
+            //     url:"product_filter",
+            //     type:"GET",
+            //     data:{obj},
+            //     success:function(res){
+            //         // console.log(res);
+            //         vm.res666 = res.data;
+            //         vm.dataNum = `${res.$length}`;
+            //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+            //     }
+            // })
+            
+        }
+
+        function clearFilter(){
+            $(".filter_lists dl dt").next().addClass("active").siblings().removeClass("active");
+            filter_arguments();
+            price_clear_btn();
+            
+            ajax_1();
+            add_page_num_btn();
+            // console.log(obj);
+            // $.ajax({
+            //     url:"product_filter",
+            //     type:"GET",
+            //     data:{obj},
+            //     success:function(res){
+            //         // console.log(res);
+            //         vm.res666 = res.data;
+            //         vm.dataNum = `${res.$length}`;
+            //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+            //     }
+            // })
+        }
+        function sort_default(){
+            filter_arguments();
+            obj.hasSold="none";
+            obj.price[2]="none";
+            
+            ajax_1();
+            add_page_num_btn();
+            // $.ajax({
+            //     url:"product_filter",
+            //     type:"GET",
+            //     data:{obj},
+            //     success:function(res){
+            //         // console.log(res);
+            //         vm.res666 = res.data;
+            //         vm.dataNum = `${res.$length}`;
+            //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+            //     }
+            // })
+        }
+        function sort_price(){
+            filter_arguments();
+            if( obj.price[2]=="DESC"){
+                obj.price[2]="ASC"
+            }else{
+                obj.price[2]="DESC"
+            }
+            obj.hasSold="none"
+            
+            ajax_1();
+            add_page_num_btn();
+            // $.ajax({
+            //     url:"product_filter",
+            //     type:"GET",
+            //     data:{obj},
+            //     success:function(res){
+            //         // console.log(res);
+            //         vm.res666 = res.data;
+            //         vm.dataNum = `${res.$length}`;
+            //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+            //     }
+            // })
+        }
+        function sort_hasSold(){
+            filter_arguments();
+            if( obj.hasSold=="DESC"){
+                obj.hasSold="ASC"
+            }else{
+                obj.hasSold="DESC"
+            }
+            obj.price[2]="none"
+            
+            ajax_1();
+            add_page_num_btn();
+            // $.ajax({
+            //     url:"product_filter",
+            //     type:"GET",
+            //     data:{obj},
+            //     success:function(res){
+            //         // console.log(res);
+            //         vm.res666 = res.data;
+            //         vm.dataNum = `${res.$length}`;
+            //         vm.obj.pageNum = ["1",Math.ceil(vm.dataNum/20)];
+            //     }
+            // })
+        }
+    // 右边弹出框--QQ--回到顶部
+        Vue.component("texts",{
+        props:['message'],
+        template:`
+        <div>
+            <img src="img/shopPosition.png" usemap="#mapPosition">
+            <map name="mapPosition">
+                <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+            </map>
+        </div>`, 
+        props:["qq"]
+        })
+        new Vue({
+            el:"#shopPosition",
+            data:{},
+            methods:{
+                qq(){
+                    alert("此功能暂未开放，敬请期待")
+                }
+            }
+        })
+    //分页功能
+        //函数--ajax加载后动态修改数字按钮的数量
+        function add_page_num_btn(){
+            // setTimeout(() => {
+                var html ="" ;
+                for(var i =1;i<vm.obj.pageNum[1]+1;i++){
+                    // console.log(i);
+                    html += `<button class="pageCount_num">${i}</button>`;
+                    // console.log(html,i);
+                }
+
+                console.log(vm.obj.pageNum[1]);
+                // $(html).insertBefore(".pageCount_bottom_box>span");
+                // $(".pageCount_bottom_box .icon-zuojiantou").insertAfter(html);
+
+                $(".pageCount_bottom_box>span").html("").html(html);//动态加载到页面上
+                $("button.pageCount_num").eq(obj.pageNum[0]-1).addClass("active");
+                // console.log(456);
+                $("button.pageCount_num").click(function(){
+                    obj.pageNum[0]=$(this).html();
+                    $(this).addClass("active").siblings().removeClass("active");
+                    filter_arguments();
+                    ajax_2();
+                    // alert(obj.pageNum[0]);
+                })
+            // }, 500);
+        }
+
+        // $("button.pageCount_num").click(function(){
+        //     obj.pageNum[0]=$(this).html();
+        //     alert(obj.pageNum[0]);
+        // })
+
+        //定义一个函数，调用函数的时候，获取当前筛选的条件（调用filter_argument）
+        //获取当前分页的页数 obj.pageNum[0]，添加到
+        //获取当前条件数据的长度  vm.dataNum
+
+        //如果当前商品数据长度>20  动态加载分页数字按钮,
+            //
+        //进行ajax请求，发送参数obj，将obj
+
+        //左右按钮点击事件，obj.pageNum[0]++或--，然后调用ajax函数
+        
+        //设置数字按钮点击事件，将按钮的数字更新到obj参数对象中
+        //
+
+
+        
+
+    </script>
+</body>
+</html>

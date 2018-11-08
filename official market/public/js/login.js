@@ -1,0 +1,50 @@
+$(function(){
+    
+    function isLogin(){
+        $.ajax({
+            url:"http://127.0.0.1:3030/users/islogin",
+            type:"get",
+            dataType:"json",
+            success:function(data){
+                if(data.ok==0){
+                    $("#signin").hide();
+                    $("#signout").show();
+                    console.log(data.uname)
+                }else{
+                    console.log(111);
+                    console.log(data.uname)
+                    $("#signin").show();
+                    $("#signout").hide();
+                    $(".uname").html(data.uname);
+                }
+            }
+        })
+    }
+    isLogin();
+    var vm =new Vue({
+        el:".user_top",
+        data:{
+            kw:"",
+        },
+        methods:{
+            search(){
+                if(this.kw.trim()!==""){
+                    location.href=`http://127.0.0.1:3030/product.html?kw=${this.kw}`;
+                }
+            },
+            signin(){
+                location.href="http://127.0.0.1:3030/login.html?back="+location.href;
+            },
+            signout(){
+                $.ajax({
+                    url:"http://127.0.0.1:3030/users/signout",
+                    type:"get",
+                    success:isLogin
+                })
+            },
+            signup(){
+                location.href="http://127.0.0.1:3030/signup.html?back="+location.href;
+            }
+        }
+    })
+})

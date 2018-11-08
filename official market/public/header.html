@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
 </head>
 <body>
     <div class="user_top">
-        <span><a href="#">登录</a>|</span>
-        <span><a href="#">注册</a></span>
-        <span><a href="#">购物车</a></span>
+        <div id="signin" style="display:none;">
+            <span class="uname"></span>
+            <a href="#" @click.prevent="signout">退出</a>
+            <a href="#">会员中心</a>
+            <a href="#" class="cart">购物车</a>
+        </div>
+        <div id="signout">
+            <span><a href="#" @click.prevent="signin" class="btn_login"> 登录 </a> | </span>
+            <span><a href="#" @click.prevent="signup">注册</a></span>
+            <span><a href="#" class="cart">购物车</a></span>
+        </div>
     </div>
     <div class="top_nav_box">
         <div class="nav_inner">
@@ -23,13 +32,13 @@
             <img src="img/phone_erweima.jpg" alt="erweima" class="qr_code">
             <ul>
                 <li><a href="index.html">首页</a></li>
-                <li><a href="index_gj1573.html">国窖1573</a></li>
-                <li><a href="index_jiaolinjiu.html">窖龄酒</a></li>
-                <li><a href="index_tequ.html">特曲</a></li>
-                <li><a href="index_touqu.html">头曲</a></li>
-                <li><a href="#">老窖藏品</a></li>
-                <li><a href="#">桃花醉</a></li>
-                <li><a href="#">所有商品</a></li>
+                <li><a href="mall_index.html?veriety=gj1573">国窖1573</a></li>
+                <li><a href="mall_index.html?veriety=jiaolin">窖龄酒</a></li>
+                <li><a href="mall_index.html?veriety=tequ">特曲</a></li>
+                <li><a href="mall_index.html?veriety=touqu">头曲</a></li>
+                <li><a href="mall_index.html?veriety=ljcp">老窖藏品</a></li>
+                <li><a href="mall_index.html?veriety=thz">桃花醉</a></li>
+                <li><a href="mall_index.html">所有商品</a></li>
             </ul>
             <div class="fixed"></div>
         </div>
@@ -43,21 +52,48 @@
             <li><a href="index_rxtj.html"><img src="img/rxtj.png" alt=""><p>热销推荐</p></a></li>
         </ul>
     </div>
-
+    <div id="shopPosition">
+         <texts message="..." :qq="qq"></texts>
+    </div> 
+    <script src="js/vue.js"></script>
     <script>
         $(function(){
             var navoffset=$(".nav_inner_list").offset().top;
-            console.log(navoffset);
+            // console.log(navoffset);
             $(window).scroll(function(){
                 var scrollPos=$(window).scrollTop();
-                console.log(scrollPos);
+                // console.log(scrollPos);
                 if(scrollPos>=navoffset){
                     $(".nav_inner_list").addClass("fixed"); 
                 }else{
                     $(".nav_inner_list").removeClass("fixed"); 
                 }
             })
+
+            // 右边弹出框
+            Vue.component("texts",{
+            props:['message'],
+            template:`
+            <div>
+                <img src="img/shopPosition.png" usemap="#mapPosition">
+                <map name="mapPosition">
+                    <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                    <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+                </map>
+            </div>`, 
+            props:["qq"]
+            })
+            new Vue({
+                el:"#shopPosition",
+                data:{},
+                methods:{
+                    qq(){
+                        alert("此功能暂未开放，敬请期待")
+                    }
+                }
+            })
         })
     </script>
+    <script src="js/login.js"></script>
 </body>
 </html>

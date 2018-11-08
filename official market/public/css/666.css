@@ -1,0 +1,103 @@
+ 
+    #myform{
+        position:relative
+    }
+    #myform .x-input{
+        position: relative;
+        z-index: 999;
+
+    }
+    #myform .form-label{
+        display: block;
+        float: left;
+    }
+    #myform .form-act{
+        display: block;
+        float: left;
+    }
+    
+    /* 背景长度显示 */
+	.strength_meter{position:absolute;
+	left:0;
+	top:0px;
+	width:97%;
+	height:15px;
+	z-index:1;
+    border-radius:5px}
+
+    
+    /* 背景颜色div */
+	.strength_meter div{width:0%;
+	height:38px;
+	text-align:right;
+	color:#000;
+	line-height:30px;
+	-webkit-transition:all .3s ease-in-out;
+	padding-right:12px;
+    /* border-radius:5px; */
+    }
+
+    /* 隐藏显示密码文本按钮 */
+	.button_strength{
+        /* text-decoration:none; */
+        color:#000;
+        font-size:13px;
+        display:none;
+    }
+    /* 密码强度显示文本 */
+	.strength_meter div p{position:absolute;
+	top:32px;
+	right:0px;
+	color:#000;
+    font-size:13px
+    }
+
+    /* 样式 */
+	.veryweak{background-color:#ffa0a0;
+	border-color:#f04040!important;
+    width:25%!important}
+    
+	.weak{background-color:#ffb78c;
+	border-color:#ff853c!important;
+    width:50%!important}
+    
+	.medium{background-color:#ffec8b;
+	border-color:#fc0!important;
+    width:75%!important}
+    
+	.strong{background-color:#c3ff88;
+	border-color:#8dff1c!important;
+    width:100%!important}
+
+	.clear{clear:both;
+    display:block}
+
+
+
+
+    #myform input[type=password],#myform input[type=text]{background:0 0;
+    /* border:2px solid #09f; */
+    color:#777;
+    font-family:lato,sans-serif;
+    font-size:14px;
+    /* padding:9px 5px; */
+    height:21px;
+    text-indent:6px;
+    -webkit-appearance:none;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    -webkit-transition:border .25s linear,color .25s linear;
+    -moz-transition:border .25s linear,color .25s linear;
+    -o-transition:border .25s linear,color .25s linear;
+    transition:border .25s linear,color .25s linear;
+    -webkit-backface-visibility:hidden;
+    width:100%}
+   
+
+    html{font-family:lato,sans-serif;
+        color:#fff;
+        background-color:#003b6a}
