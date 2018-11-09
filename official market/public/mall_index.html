@@ -686,7 +686,7 @@
                         pageNum:[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`]
                     }
                     this.obj.pageNum[1]=`${Math.ceil(vm.dataNum/20)}`;
-                    
+                    console.log("页数1："+this.obj.pageNum[1]);
                     // alert(this.obj.pageNum[0]); 
                     filter_arguments();
                     ajax_2();
@@ -700,7 +700,7 @@
                     // this.obj={
                     //     pageNum:[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`]
                     // }
-
+                    console.log("页数2："+this.obj.pageNum[1]);                    
                     this.obj.pageNum=[this.obj.pageNum[0],`${Math.ceil(vm.dataNum/20)}`];
                     // console.log(this.obj.pageNum[1]);
                     // console.log(this.obj.pageNum[0]);
@@ -709,6 +709,7 @@
                     // alert(this.obj.pageNum[0]); 
                     filter_arguments();
                     // console.log(this.obj.pageNum[0]);                    
+                    console.log("页数2："+this.obj.pageNum[1]);
                     ajax_2();
                     // console.log(this.obj.pageNum[0]);
                     add_page_num_btn();
@@ -776,12 +777,6 @@
             }
         })
         
-    //页面加载之后ajax加载商品
-
-        // add_page_num_btn();
-
-
-
 
 
         //创建获取页面参数的函数
@@ -1128,11 +1123,13 @@
         //函数--ajax加载后动态修改数字按钮的数量
         function add_page_num_btn(){
             // setTimeout(() => {
+                // console.log("aaa"+vm.obj.pageNum[1]+1);                
                 var html ="" ;
-                for(var i =1;i<vm.obj.pageNum[1]+1;i++){
+                for(var i =1;i<=vm.obj.pageNum[1];i++){
                     // console.log(i);
                     html += `<button class="pageCount_num">${i}</button>`;
-                    // console.log(html,i);
+                    // console.log("i"+i);
+                    // console.log("aaa"+vm.obj.pageNum[1]+1);
                 }
 
                 console.log(vm.obj.pageNum[1]);

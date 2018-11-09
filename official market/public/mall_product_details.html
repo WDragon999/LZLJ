@@ -179,13 +179,9 @@
                 <div class="product_details_inner">
                     <div class="details_pic fl">
                         <div class="details_big_pic">
-                            <div >
+                            <div class="aaaa">
                                 <img :src=res[0].pic alt="">
-                            </div>
-                            <div class="glass">
-                                <a href="#">
-                                    <img src="img/放大镜.png" width="20" alt="">
-                                </a>
+                                <p class="cover"></p>
                             </div>
                         </div>
                         <div class="details_pic_list">
@@ -205,6 +201,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="details_glass_box">
+                        <img :src=res[0].pic alt="">
                     </div>
                     <div class="details_txt fr">
                         <div class="det_txt_title">
@@ -878,6 +877,7 @@
     </div>
     <script src="js/vue.js"></script>
     <script>
+    //顶部红色框鼠标悬停下拉--动态加载底部--左侧
         $(".all-category_inner,.category_box").hover(function(){
             $(".category_box").show();
         },function(){
@@ -891,7 +891,7 @@
         })  
 
 
-
+    //访问url中的id值动态加载商品信息
         var reg = new RegExp("(^|&)" + "pid" + "=([^&]*)(&|$)"); // 构造一个含有目标参数的正则表达式对象
         // var r = window.location.search.substr(1).match(reg);  // 匹配目标参数
         var r ;
@@ -899,20 +899,37 @@
             var r = window.location.search.substr(1).match(reg)[2];
             console.log(r);
         }
-        $.ajax({
-            type:"GET",
-            url:"/details",
-            data:{pid:r},
-            success:function(res){
-                console.log(res);
-                    var vm = new Vue({
-                    el:"#product_details",
-                    data:{res}
+        var res = [{
+            alcohol:"",
+            price:"",
+            title:"",
+            veriety:"",
+            pec:"",
+            hasSold:"",
+            pid:"",
+            pic:""
+        }];
+        var vm = new Vue({
+            el:"#product_details",
+            data:{res},
+            methods:{
+
+            },
+            beforeCreate(){
+                $.ajax({
+                    type:"GET",
+                    url:"/details",
+                    data:{pid:r},
+                    success:function(result){
+                        console.log(result);
+                        vm.res = result
+                    }
                 })
             }
-        })
+        })      
 
-        // 右边弹出框
+
+    // 右边弹出框
         Vue.component("texts",{
         props:['message'],
         template:`
@@ -934,6 +951,60 @@
                 }
             }
         })
+
+    //放大镜
+    var minbox = $(".aaaa");
+    var cover = $(".cover");
+    var maxbox = $(".details_glass_box");
+    var maximg = $(".details_glass_box img");
+    var minimg = $(".aaaa img");
+    function offsetTL(obj){
+        var ofL=0,ofT=0;
+        if (obj) {
+            ofL+=obj[0].offsetLeft+obj[0].clientWidth;
+            ofT+=obj[0].offsetTop+obj[0].clientHeight;
+            // obj=obj.offsetParent();
+            // console.log(ofL,ofT);
+            // console.log(1);
+        }
+        return {left:ofL,top:ofT}
+    }
+
+    $(".aaaa").mousemove(function(e){
+        // console.log(1);
+        // e.stopPropagation();
+        // e.preventDefault();
+        cover.css("display","block");
+        maxbox.css("display","block");
+        var coverX = e.clientX-offsetTL(minbox).left-cover[0].clientWidth/2+175;
+        var coverY = e.clientY-offsetTL(minbox).top-cover[0].clientHeight/2+175;
+        var bili = maximg[0].clientWidth/minimg[0].clientWidth;
+        console.log(minimg[0].clientWidth);
+        console.log(maximg[0].clientWidth);
+        // console.log(bili)
+        // console.log(e.clientX,e.clientY);   //离浏览器边框距离
+        // console.log(e.offsetX,e.offsetY);    //离该元素边框距离
+        // console.log(e.clientX-e.offsetX)
+        // console.log(minbox[0].offsetLeft+minbox[0].clientWidth);
+        if(coverX<=0){
+            coverX=0;
+        }else if(coverX>=minbox[0].clientWidth-cover[0].clientWidth){
+            coverX=minbox[0].clientWidth-cover[0].clientWidth
+        }
+        if(coverY<=0){
+            coverY=0;
+        }else if(coverY>=minbox[0].clientHeight-cover[0].clientHeight){
+            coverY=minbox[0].clientHeight-cover[0].clientHeight
+        }
+        // console.log(coverX,coverY);
+        cover.css("left",coverX+"px");
+        cover.css("top",coverY+"px");
+        $(".details_glass_box img").css({"top":(-coverY-50)*bili+"px","left":-(coverX)*bili+"px"})
+    })
+    $(".aaaa").mouseout(function(){
+        cover.css("display","none");
+        maxbox.css("display","none");
+    })
     </script>
     <script src="js/login.js"></script>
 </body>
