@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/shopPosition.css">
+</head>
+<body>
+    <div class="user_top">
+        <div class="user_top_inner">
+            <div class="user_left fl">
+                <span>您好，欢迎来到泸州老窖商城！</span>
+                <span><a href="login.html">登录</a></span>
+                <span class="diving"></span>
+                <span><a href="signup.html">注册</a></span>
+            </div>
+            <div class="user_right fr">
+                <span><a href="#">我的订单</a></span>
+                <span class="diving"></span>
+                <span><a href="#">会员中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">帮助中心</a></span>
+                <span class="diving"></span>
+                <span><a href="#">我的购物车</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="clearfix"></div> -->
+
+    <!-- <button id="login">11111</button> -->
+    <div class="small-page">
+        <div>
+            <a href="mall_index.html"><img src="img/logo.jpg" alt=""></a> 
+        </div>
+    </div>
+    <div class="cart_container">
+        <table></table>
+        <div class="cart_wrap">
+            <p class="cart_title"><img src="img/cart (2).png" alt="">购物车</p>
+            <div class="cart_progress">
+                <ul>
+                    <li>
+                        <span> 1</span>
+                        购物车
+                    </li>
+                    <li>
+                        <span> 2</span>
+                        提交订单信息
+                    </li>
+                    <li>
+                        <span> 3</span>
+                        成功提交订单
+                    </li>
+                </ul>
+            </div>
+            <div class="cart_list_box">
+                <div class="title">
+                    <h2>已选择的商品</h2>
+                </div>
+                <table class="cart-main">
+                    <thead>
+                        <tr>
+                            <th colspan="2">商品</th>
+                            <th>销售价</th>
+                            <th>数量</th>
+                            <th>优惠金额</th>
+                            <th>积分</th>
+                            <th>小计</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cart-item">
+                        <tr class="cart-product">
+                            <td colspan="2">
+                                <div class="p-pic fl">
+                                        <img src="img/liquor/gj1573/gj1573(1).jpg" alt="">
+                                </div>
+                                <div class="p-title fr">
+                                    <a href="#">55度国窖1573酒·春酿金狗佑财A款 2.5L*1（圆瓶）</a>
+                                    <div class="p-spec">
+                                        净含量：
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- <td class="p-info">
+                                
+                            </td> -->
+                            <td class="p-price">
+                                ￥75.00
+                            </td>
+                            <td class="p-quantity">
+                                <button>-</button>
+                                <input type="num" value="1">
+                                <button>+</button>
+                            </td>
+                            <td class="p-discount">
+                                ￥0.00
+                            </td>
+                            <td class="p-integral">
+                                -
+                            </td>
+                            <td class="p-subtotal">
+                                ￥
+                            </td>
+                            <td class="p-action">
+                                <a href="#">收藏</a>
+                                <i>|</i>
+                                <a href="#">移除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+
+                            </td>
+                            <td colspan="4" class="order-price">
+                                <ul>
+                                    <li>
+                                        <span class="label">商品总金额</span>
+                                        <span class="price">￥</span>
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+               
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/shopPosition.js"></script>
+    <div id="shopPosition">
+         <texts :qq="qq"></texts>
+    </div>  
+    <div id="foot"></div>
+    
+    <script>
+        $(function(){
+            $("#foot").load("foot.html");
+        // 右边弹出框
+            Vue.component("texts",{
+                props:['message'],
+                template:`
+                <div>
+                    <img src="img/shopPosition.png" usemap="#mapPosition">
+                    <map name="mapPosition">
+                        <area shape="rect" coords="35,91,162,115" alt="这是什么" @click="qq">
+                        <area shape="rect" coords="25,133,172,156" href="#" alt="这是什么222">
+                    </map>
+                </div>`, 
+                props:["qq"]
+            })
+            var shopPosition= new Vue({
+                el:"#shopPosition",
+                data:{},
+                methods:{
+                    qq(){
+                        alert("此功能暂未开放，敬请期待")
+                    }
+                }
+            })
+            console.log(999)
+
+
+
+            var vm = new Vue({
+                el:"",
+                data:{},
+                
+            })
+
+            var ajax_cart=function(){
+                $.ajax({
+                    url:"",
+                    type:"get",
+                })
+            }
+        })
+    </script>
+</body>
+</html>
