@@ -992,6 +992,7 @@
             $(".price_input:first").val("");
             $(".price_input:last").val("");
             $(".price dd:first").attr("class","active").siblings().removeClass("active");
+            add_page_num_btn();
         }
         
         function price_select_btn(){
@@ -1122,7 +1123,7 @@
     //分页功能
         //函数--ajax加载后动态修改数字按钮的数量
         function add_page_num_btn(){
-            // setTimeout(() => {
+            setTimeout(() => {
                 // console.log("aaa"+vm.obj.pageNum[1]+1);                
                 var html ="" ;
                 for(var i =1;i<=vm.obj.pageNum[1];i++){
@@ -1142,34 +1143,12 @@
                 $("button.pageCount_num").click(function(){
                     obj.pageNum[0]=$(this).html();
                     $(this).addClass("active").siblings().removeClass("active");
-                    filter_arguments();
+                    // filter_arguments();
                     ajax_2();
-                    // alert(obj.pageNum[0]);
+                    alert(obj.pageNum[0]);
                 })
-            // }, 500);
+            }, 300);
         }
-
-        // $("button.pageCount_num").click(function(){
-        //     obj.pageNum[0]=$(this).html();
-        //     alert(obj.pageNum[0]);
-        // })
-
-        //定义一个函数，调用函数的时候，获取当前筛选的条件（调用filter_argument）
-        //获取当前分页的页数 obj.pageNum[0]，添加到
-        //获取当前条件数据的长度  vm.dataNum
-
-        //如果当前商品数据长度>20  动态加载分页数字按钮,
-            //
-        //进行ajax请求，发送参数obj，将obj
-
-        //左右按钮点击事件，obj.pageNum[0]++或--，然后调用ajax函数
-        
-        //设置数字按钮点击事件，将按钮的数字更新到obj参数对象中
-        //
-
-
-        
-
     </script>
 </body>
 </html>

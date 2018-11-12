@@ -4,7 +4,7 @@ const pool = require("./pool");
 const session = require("express-session");
 
 var users = require("./routes/users")
-
+var cart =require("./routes/cart")
 
 
 var app =express();
@@ -195,3 +195,4 @@ app.get("/fenye",(req,res)=>{
 
 
 app.use("/users",users);
+app.use("/cart",cart);
